@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head>
+<body>
+
+<!--header-->
+<include src="public/admin-header.html" data-name="添加用户"></include> 
+
+<!--menu-->
+<include src="public/admin-sideMenu.html" data-menu="user"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+
+  <div class="mt-content-1x admin-member-add">
+    
+    <h3>添加用户</h3><br><br>
+
+    <label class="admin-label">用户类型：</label>
+    <div class="mt-select" style="width: 159px;">
+        <div class="mt-select-title">直销</div>
+        <i class="iconfont icon-xia"></i>
+        <ul class="mt-select-box">
+            <li class="option" data-val="1">直销</li>
+            <li class="option" data-val="2">终端</li>
+            <li class="option" data-val="3">代理商</li>
+        </ul>
+    </div>
+    <br><br>
+
+    <label class="admin-label">用户名：</label>
+    <div class="mt-input">
+      <input type="text" readonly="readonly" placeholder="">
+    </div>
+    <br><br>
+     
+    <label class="admin-label">密码：</label>
+    <div class="mt-input">
+      <input type="password" placeholder="">
+    </div>
+    <br><br>
+
+    <label class="admin-label">公司名称：</label>
+    <div class="mt-input">
+      <input type="text" placeholder="">
+    </div>
+    <br><br>
+
+    <label class="admin-label">手机号码：</label>
+    <div class="mt-input">
+      <input type="text" placeholder="">
+    </div>
+    <br><br>
+
+    <label class="admin-label">邮箱：</label>
+    <div class="mt-input">
+      <input type="text" placeholder="">
+    </div>
+    <br><br>
+    
+    <a href="javascript:;" class="mt-btn-blue ink-reaction admin-save-btn">保存</a>
+
+  </div>
+
+
+
+</div>
+
+
+<!--选择user弹窗--> 
+<div class="mt-modal-dialog" id="modalTest">
+  <a href="javascript:;" class="mt-modal-close"><i class="iconfont icon-shanchu"></i></a>
+  <div class="admin-dialog-header">
+      <div class="mt-input">
+        <input type="text" placeholder="用户名">
+      </div>
+      <div class="mt-input">
+        <input type="text" placeholder="公司名称">
+      </div>
+      <a href="javascript:;" class="mt-btn-green ink-reaction mt-btn-sm"><i class="iconfont icon-sousuo1"></i> 搜索</a>
+  </div>
+  <div class="mt-g">
+    <div class="mt-g-12 admin-dialog-maxhei">
+        <table class="mt-table mt-table-hover mt-table-striped">
+            <tr>
+                <th>用户名</th>
+                <th>公司名称</th>
+                <th>座机电话</th>
+                <th>手机号码</th>
+                <th>邮箱</th>
+                <th>地址</th>
+                <th>等级</th>
+                <th>金额</th>
+                <th>购买价格</th>
+                <th>开户银行</th>
+                <th>开户账号</th>
+                <th>审核状态</th>
+                <th>区域</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="mt-g-12 admin-dialog-pagelist">
+      <include src="public/pagelist.html"></include> 
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+$(function(){
+
+});
+</script>
+</html>

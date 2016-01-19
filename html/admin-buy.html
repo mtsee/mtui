@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head> 
+<body>
+
+<!--header-->
+<include src="public/admin-header.html" data-name="充值列表"></include> 
+
+<!--menu-->
+<include src="public/admin-sideMenu.html" data-menu="bug"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+  
+  <div class="mt-form-header">
+        <label>购买时间 : </label>
+        <div class="mt-input mt-date mt-icon-input">
+          <input type="text" value="2015-12-28" readonly="readonly" placeholder="选择开始时间" id="date1">
+          <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+        </div>
+        &nbsp;
+        <div class="mt-input mt-date mt-icon-input">
+          <input type="text" value="2015-12-28" readonly="readonly" placeholder="选择结束时间" id="date2">
+          <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+        </div>
+        &nbsp;
+        <div class="mt-select">
+            <div class="mt-select-title">请选择</div>
+            <i class="iconfont icon-xia"></i>
+            <ul class="mt-select-box">
+              <li class="option" data-val="小张">公司名称</li>
+              <li class="option" data-val="小红">用户名</li>
+              <li class="option" data-val="小赵">报告编号</li>
+            </ul>
+        </div>
+        &nbsp;
+        <div class="mt-input mt-icon-input">
+          <input type="text" placeholder="关键字">
+        </div>
+        &nbsp;
+        <a href="javascript:;" class="mt-btn-blue mt-btn-sm ink-reaction"><i class="iconfont icon-sousuo1"></i> 搜索</a>
+        &nbsp;
+        <a href="javascript:;" class="mt-btn-green mt-btn-sm ink-reaction"><i class="iconfont icon-icon46"></i> Excel下载</a>
+        &nbsp;
+        <div class="mt-dropdown admin-buy-btn">
+            <a href="javascript:;" class="mt-btn-blue ink-reaction mt-dropdown-toggle">充值申请 <i class="iconfont icon-xia"></i></a>
+            <div class="mt-dropdown-content animated fadeInUp">
+                <div class="mt-form">
+                  <label class="admin-label">用户名：</label>
+                  <div class="mt-input">
+                    <input type="text" readonly="readonly" placeholder="">
+                  </div>
+                  <a href="javascript:;" class="mt-btn-green mt-btn-sm ink-reaction mt-modal-btn" data-modal="{target:'#modalUserList', clickbgclose:false, width:1200, height:500}"><i class="iconfont icon-yonghu"></i> 选择用户</a>
+                  <br><br>
+                   
+                  <label class="admin-label">公司名称：</label>
+                  <div class="mt-input">
+                    <input type="text" data-validate="{validate : {notempty:'不能为空！',companyname:'请输入正确的公司名称！'}, style : 'fadeRight'}" placeholder="">
+                  </div>
+                  <br><br>
+
+                  <label class="admin-label">充值金额：</label>
+                  <div class="mt-input">
+                    <input type="text" placeholder="">
+                  </div>
+                  <br><br>
+
+                  <label class="admin-label">到账时间范围：</label>
+                  <div class="mt-input mt-date mt-icon-input">
+                      <input type="text" value="2015-12-28" readonly="readonly" id="date1">
+                      <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                  </div> ~ 
+                  <div class="mt-input mt-date mt-icon-input">
+                      <input type="text" value="2015-12-28" readonly="readonly" id="date2">
+                      <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                  </div>
+                  <br><br>
+
+                  <label class="admin-label">备注信息：</label>
+                  <div class="mt-textarea">
+                    <textarea placeholder="请输入用户名"></textarea>
+                  </div>
+                  <br><br>
+                  
+                  <a href="javascript:;" class="mt-btn-blue ink-reaction admin-save-btn">提交充值审核</a>
+                </div>
+          </div>
+        </div>
+  </div>
+  <div class="mt-form-header-block"></div>
+
+  <div class="mt-content-1x">
+    
+      <table class="mt-table mt-table-striped">
+          <tr>
+              <th>序号</th>
+              <th>用户名</th>
+              <th>公司名称</th>
+              <th>充值金额</th>
+              <th>充值时间</th>
+              <th>操作员工</th>
+              <th>财务审核状态</th>
+              <th>操作</th>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td>xingjie5</td>
+              <td>北京时代华诚投资有限公司</td>
+              <td>1000.0</td>
+              <td>2015-12-02</td>
+              <td>xingjie</td>
+              <td>已通过</td>
+              <td></td>
+          </tr>
+
+      </table>
+      <include src="public/pagelist.html"></include> 
+
+  </div>
+
+</div>
+
+<!--选择user弹窗--> 
+<div class="mt-modal-dialog" id="modalUserList">
+<div class="mt-dialog-title">
+    可选用户列表
+    <a href="javascript:;" class="mt-modal-close"><i class="iconfont icon-shanchu"></i></a>
+  </div>
+  <div class="mt-dialog-content">
+      
+      <div class="admin-dialog-header">
+          <div class="mt-input">
+            <input type="text" placeholder="用户名">
+          </div>
+          <div class="mt-input">
+            <input type="text" placeholder="公司名称">
+          </div>
+          <a href="javascript:;" class="mt-btn-green ink-reaction mt-btn-sm"><i class="iconfont icon-sousuo1"></i> 搜索</a>
+      </div>
+        <div class="admin-dialog-maxhei">
+            <table class="mt-table mt-table-hover mt-table-striped">
+                <tr>
+                    <th>用户名</th>
+                    <th>公司名称</th>
+                    <th>座机电话</th>
+                    <th>手机号码</th>
+                    <th>邮箱</th>
+                    <th>地址</th>
+                    <th>等级</th>
+                    <th>金额</th>
+                    <th>购买价格</th>
+                    <th>开户银行</th>
+                    <th>开户账号</th>
+                    <th>审核状态</th>
+                    <th>区域</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>hkf4</td>
+                    <td>阿里云有限公司</td>
+                    <td>028-845462</td>
+                    <td>13551301693</td>
+                    <td>676014586@qq.com</td>
+                    <td data-more="5">四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城四川成都世纪城</td>
+                    <td>S</td>
+                    <td>102441.0</td>
+                    <td>2000</td>
+                    <td>手动输入</td>
+                    <td>1218294938434</td>
+                    <td>已通过</td>
+                    <td>成都</td>
+                    <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+                </tr>
+                <tr>
+                    <td>hkf4</td>
+                    <td>阿里云有限公司</td>
+                    <td>028-845462</td>
+                    <td>13551301693</td>
+                    <td>676014586@qq.com</td>
+                    <td>四川成都世纪城</td>
+                    <td>S</td>
+                    <td>102441.0</td>
+                    <td>2000</td>
+                    <td>手动输入</td>
+                    <td>1218294938434</td>
+                    <td>已通过</td>
+                    <td>成都</td>
+                    <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+                </tr>
+                <tr>
+                    <td>hkf4</td>
+                    <td>阿里云有限公司</td>
+                    <td>028-845462</td>
+                    <td>13551301693</td>
+                    <td>676014586@qq.com</td>
+                    <td>四川成都世纪城</td>
+                    <td>S</td>
+                    <td>102441.0</td>
+                    <td>2000</td>
+                    <td>手动输入</td>
+                    <td>1218294938434</td>
+                    <td>已通过</td>
+                    <td>成都</td>
+                    <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+                </tr>
+                <tr>
+                    <td>hkf4</td>
+                    <td>阿里云有限公司</td>
+                    <td>028-845462</td>
+                    <td>13551301693</td>
+                    <td>676014586@qq.com</td>
+                    <td>四川成都世纪城</td>
+                    <td>S</td>
+                    <td>102441.0</td>
+                    <td>2000</td>
+                    <td>手动输入</td>
+                    <td>1218294938434</td>
+                    <td>已通过</td>
+                    <td>成都</td>
+                    <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+                </tr>
+                <tr>
+                    <td>hkf4</td>
+                    <td>阿里云有限公司</td>
+                    <td>028-845462</td>
+                    <td>13551301693</td>
+                    <td>676014586@qq.com</td>
+                    <td>四川成都世纪城</td>
+                    <td>S</td>
+                    <td>102441.0</td>
+                    <td>2000</td>
+                    <td>手动输入</td>
+                    <td>1218294938434</td>
+                    <td>已通过</td>
+                    <td>成都</td>
+                    <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+                </tr>
+                <tr>
+                    <td>hkf4</td>
+                    <td>阿里云有限公司</td>
+                    <td>028-845462</td>
+                    <td>13551301693</td>
+                    <td>676014586@qq.com</td>
+                    <td>四川成都世纪城</td>
+                    <td>S</td>
+                    <td>102441.0</td>
+                    <td>2000</td>
+                    <td>手动输入</td>
+                    <td>1218294938434</td>
+                    <td>已通过</td>
+                    <td>成都</td>
+                    <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+                </tr>
+                <tr>
+                    <td>hkf4</td>
+                    <td>阿里云有限公司</td>
+                    <td>028-845462</td>
+                    <td>13551301693</td>
+                    <td>676014586@qq.com</td>
+                    <td>四川成都世纪城</td>
+                    <td>S</td>
+                    <td>102441.0</td>
+                    <td>2000</td>
+                    <td>手动输入</td>
+                    <td>1218294938434</td>
+                    <td>已通过</td>
+                    <td>成都</td>
+                    <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+                </tr>
+            </table>
+        <div class="admin-dialog-pagelist">
+          <include src="public/pagelist.html"></include> 
+        </div>
+      </div>
+
+  </div>
+</div>
+
+</body>
+<script src="../assets/script/plugin/laydate/laydate.js"></script>
+<script>
+$(function(){
+
+  //日历初始化
+  laydate({
+    elem: '#date1', //需显示日期的元素选择器
+        event: 'click', //触发事件
+        format: 'YYYY-MM-DD', // YYYY-MM-DD hh:mm:ss 日期格式
+        istime: false, //是否开启时间选择
+        isclear: true, //是否显示清空
+        istoday: true, //是否显示今天
+        issure: true, //是否显示确认
+        festival: true, //是否显示节日
+        min: '1900-01-01 00:00:00', //最小日期
+        max: '2099-12-31 23:59:59', //最大日期
+        start: '2014-6-15 23:00:00',    //开始日期
+        fixed: false, //是否固定在可视区域
+        zIndex: 99999999, //css z-index
+        choose: function(dates){
+          console.log(dates);
+        } //选择好日期的回调
+  });
+
+  //日历初始化
+  laydate({
+    elem: '#date2', //需显示日期的元素选择器
+        event: 'click', //触发事件
+        format: 'YYYY-MM-DD', // YYYY-MM-DD hh:mm:ss 日期格式
+        istime: false, //是否开启时间选择
+        isclear: true, //是否显示清空
+        istoday: true, //是否显示今天
+        issure: true, //是否显示确认
+        festival: true, //是否显示节日
+        min: '1900-01-01 00:00:00', //最小日期
+        max: '2099-12-31 23:59:59', //最大日期
+        start: '2014-6-15 23:00:00',    //开始日期
+        fixed: false, //是否固定在可视区域
+        zIndex: 99999999, //css z-index
+        choose: function(dates){
+          console.log(dates);
+        } //选择好日期的回调
+  });
+
+});
+</script>
+</html>

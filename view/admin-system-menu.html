@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1452220399_5465724.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/mtui.css" />
+<!--[if lt IE 9]>
+<script src="../assets/script/plugin/jquery-1.11.2.js"></script>
+<script src="../assets/script/public/html5.js"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../assets/script/plugin/jquery-2.1.1.js"></script>
+<!--<![endif]-->
+<script src="../assets/script/plugin/mtui.js"></script>
+<!-- <script src="../assets/script/seajs/sea.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head>
+<body>
+
+<!--header-->
+<!-- 头部-->
+<div class="mt-header">
+
+	<div class="mt-breadcrumb" style="display: inline-block;">
+	    <span>当前位置:</span>
+	    <ul>
+	        <li><a href="javascript:">主页</a></li>
+	      	<li><a href="javascript:">菜单设置</a></li>
+	    </ul>
+	</div>
+
+<!-- 	<div class="admin-info">
+		<i class="iconfont icon-yonghu"></i>您好，admin
+	</div> -->
+
+	<!--其他菜单-->
+	<div class="mt-header-othermenu">
+		<div class="mt-header-menu">
+			<i class="iconfont icon-gerenzhongxin"></i> 您好，admin
+			<ul class="mt-sub-menu animated fadeInRight">
+				<li><a href="#">测试导航1</a></li>
+				<li><a href="#">测试导航2</a></li>
+				<li><a href="#">测试导航3</a></li>
+				<li><a href="admin-login.html">退出系统</a></li>
+			</ul>
+		</div>
+	</div>
+ 
+</div><!--end mt-header--> 
+
+<!--menu-->
+<!--侧面导航栏-->
+<div class="mt-sidemenu">
+	<!--LOGO-->
+	<div class="mt-logo">
+		<h1><a href="admin-index.html">浩格云信</a></h1>
+	</div>
+	
+	<!--导航-->
+	<div class="mt-sidenav">
+		<ul class="mt-sidenav-ul">
+			<li data-sidename="index">
+				<a class="ink-reaction" href="admin-user-action.html">
+					<i class="iconfont icon-iconfontkehujigongyingshangguanli"></i>
+					<span>用户行为</span>
+				</a>
+			</li>
+			<li data-sidename="order">
+				<a href="admin-order.html">
+					<i class="iconfont icon-iconfontbiaodandingyi"></i>
+					<span>所有订单</span>
+				</a>
+			</li>
+			<li data-sidename="member">
+				<a href="javascript:;">
+					<i class="iconfont icon-yuangongguanli"></i>
+					<span>员工管理</span>
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="admin-member.html">员工列表</a></li>
+					<li><a href="admin-member-add.html">添加员工</a></li>
+				</ul>
+			</li>
+			<li data-sidename="guest">
+				<a href="javascript:;">
+					<i class="iconfont icon-kehuguanli"></i>
+					<span>客户管理</span>
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="admin-guest-all.html">所有客户</a></li>
+					<li><a href="admin-guest-daili.html">代理商</a></li>
+					<li><a href="admin-guest-zhongduan.html">终端客户</a></li>
+					<li><a href="admin-guest-zhixiao.html">直销客户</a></li>
+					<li><a href="admin-guest-zhixiao-set.html">直销客户设置</a></li>
+					<li><a href="admin-guest-zhixiao-info.html">客户信息</a></li>
+				</ul>
+			</li>
+			<li data-sidename="buy">
+				<a href="javascript:;">
+					<i class="iconfont icon-chongzhi"></i>
+					<span>充值管理</span>
+				</a>
+				<ul class="mt-sub-nav"> 
+					<li><a href="admin-buy.html">充值列表</a></li>
+					<li><a href="admin-buy-add.html">充值申请</a></li> 
+				</ul>
+			</li>
+			<li data-sidename="user">
+				<a href="javascript:;">
+					<i class="iconfont icon-xianshiqi"></i>
+					<span>前台管理</span>
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="#">邮件管理</a></li>
+					<li><a href="admin-user-add.html">添加用户</a></li>
+				</ul>
+			</li>
+			<li data-sidename="system">
+				<a href="javascript:;">
+					<i class="iconfont icon-zidongpeizhi"></i>
+					<span>系统配置</span> 
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="admin-system.html">系统重置</a></li>
+					<li><a href="admin-system-menu.html">菜单设置</a></li>
+					<li><a href="admin-msgSend.html">消息推送</a></li>
+				</ul>
+			</li>
+			<li data-sidename="other">
+				<a href="javascript:;">
+					<i class="iconfont icon-zidongpeizhi"></i>
+					<span>扩展功能</span> 
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="admin-other-feedback.html">意见反馈</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+//菜单选中状态
+$(function(){
+	var $ul = $(".mt-sidenav-ul");
+	var $li = $ul.find('li');
+	var winHei = $(window).height();
+
+	//菜单动画
+	var sidenavAnimate = function(){
+		var liLen = $li.length;
+		var ulHei = $ul.height()+50;
+		var x = (ulHei-winHei)/(liLen-1);
+		if(ulHei - winHei <= 0)return;
+		$(".mt-sidenav").on('mouseover', 'li', function(event) {
+			var index = $(this).index();
+			$ul.css({
+				top: -index*x
+			});
+		});
+	};
+
+	//菜单选中状态
+	var setActiveForSidenav = function(){
+		$("li[data-sidename='system']").addClass('mt-active');
+	};
+
+
+	//init
+	sidenavAnimate();
+	setActiveForSidenav();
+});
+</script> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+
+  <div class="mt-content-1x admin-member-add">
+    
+    <h3>菜单设置</h3>
+    <div class="mt-g">
+        <div class="mt-g-12 admin-select-menu">
+
+                <ul>
+                    <li class="menuli">
+                        <div class="title"><label class="mt-checkbox"><input value="1" type="checkbox"> <i class="iconfont icon-duigou"></i> <span>一级菜单</span></label></div>
+                        <ul class="sub">
+                            <div class="subbox">
+                                <label class="mt-checkbox"><input value="11" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>二级菜单</span></label>
+                            </div>
+                            <div class="admin-selectbox">
+                                <label class="mt-checkbox"><input value="111" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="112" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="113" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="114" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                            </div>
+                        </ul>
+                        <ul class="sub">
+                            <div class="subbox">
+                                <label class="mt-checkbox"><input value="12" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>二级菜单</span></label>
+                            </div>
+                            <div class="admin-selectbox">
+                                <label class="mt-checkbox"><input value="121" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="122" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="123" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="124" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                            </div>
+                        </ul>
+                        <ul class="sub">
+                            <div class="subbox">
+                                <label class="mt-checkbox"><input value="13" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>二级菜单</span></label>
+                            </div>
+                            <div class="admin-selectbox">
+                                <label class="mt-checkbox"><input value="131" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="132" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="133" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="134" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li class="menuli">
+                        <div class="title"><label class="mt-checkbox"><input value="2" type="checkbox"> <i class="iconfont icon-duigou"></i> <span>一级菜单</span></label></div>
+                        <ul class="sub">
+                            <div class="subbox">
+                                <label class="mt-checkbox"><input value="21" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>二级菜单</span></label>
+                            </div>
+                            <div class="admin-selectbox">
+                                <label class="mt-checkbox"><input value="212" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="213" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="214" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="215" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li class="menuli">
+                        <div class="title"><label class="mt-checkbox"><input value="3" type="checkbox"> <i class="iconfont icon-duigou"></i> <span>一级菜单</span></label></div>
+                        <ul class="sub">
+                            <div class="subbox">
+                                <label class="mt-checkbox"><input value="31" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>二级菜单</span></label>
+                            </div>
+                            <div class="admin-selectbox">
+                                <label class="mt-checkbox"><input value="311" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="312" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="313" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                                <label class="mt-checkbox"><input value="314" type="checkbox" disabled="disabled"> <i class="iconfont icon-duigou"></i> <span>选项</span></label>
+                            </div>
+                        </ul>
+                    </li>
+
+                </ul>
+            
+            <a href="javascript:;" class="mt-btn-blue submits ink-reaction">提交</a>
+
+        </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+</body>
+<script>
+$(function(){
+
+    $(".admin-select-menu").on('click', '.title input:checkbox', function(e) {
+        if($(this).is(':checked')){
+            $(this).closest('.menuli').find(".subbox input:checkbox").removeAttr("disabled");
+        }else{
+            $(this).closest('.menuli').find(".subbox input:checkbox").each(function(index, el) {
+                if($(this).is(':checked')){
+                    $(this).trigger('click');
+                }
+                $(this).attr("disabled","disabled")
+            });
+        }
+    }).on('click', '.subbox  input:checkbox', function(e) {
+        if($(this).is(':checked')){
+            $(this).closest('.sub').find(".admin-selectbox input:checkbox").removeAttr("disabled");
+        }else{
+            $(this).closest('.sub').find(".admin-selectbox input:checkbox").each(function(index, el) {
+                if($(this).is(':checked')){
+                    $(this).trigger('click');
+                }
+                $(this).attr("disabled","disabled");
+            });
+        }
+    });
+
+
+    //提交
+    $(".submits").on('click', function(e) {
+        var $menu = $(".admin-select-menu");
+        //var $checkbox = $menu.find("input:checkbox");
+        var data = {};
+
+        //一级菜单
+        data.menu = [];
+        data.submenu = [];
+        data.option = [];
+        $menu.find('.title input:checkbox').each(function(index, el) {
+            if($(this).is(':checked')){
+                data.menu.push($(this).val());
+            }
+        });
+        $menu.find('.subbox input:checkbox').each(function(index, el) {
+            if($(this).is(':checked')){
+                data.submenu.push($(this).val());
+            }
+        });
+        $menu.find('.admin-selectbox input:checkbox').each(function(index, el) {
+            if($(this).is(':checked')){
+                data.option.push($(this).val());
+            }
+        });
+
+        console.log(data);
+
+    });
+
+});
+</script>
+</html>

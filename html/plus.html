@@ -1,0 +1,610 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <style>
+	.scrollspyTest div{
+		height: 200px;
+		width: 400px;
+		float: left;
+		background: #f3f3f3;
+		margin:20px;
+		border: 1px solid #e4eaec;
+		border-radius: 3px;
+	}
+	.test1{
+		padding: 10px;
+		color: #666;
+		margin-top: 20px;
+	}
+	.test2{
+		background: #57ac57;
+		color: #fff;
+	}
+	.scrollspyTest img{
+		width: 300px;
+		height: 200px;
+		background-color: #f3f3f3;
+		margin: 10px;
+		border: 1px solid #e4eaec;
+		border-radius: 3px;
+	}
+	.mt-page-content p{
+		padding: 20px;
+	}
+	.test3{
+		opacity: 0;
+	}
+	[data-group]{
+		width: 80px;
+		height: 40px;	
+		margin: 10px;
+	}
+    </style>
+</head>
+<body>
+<!--header-->
+<include src="public/header.html"></include>
+
+<!--menu-->
+<include src="public/sideMenu.html" data-menu="plus"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+    
+    <!--page-header-->
+    <div class="mt-page-header">
+    	<h1>Plus</h1>
+    </div>
+	
+	<!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">折叠面板</h3>
+    	<div class="mt-g">
+
+			  <div class="mt-g-4">
+			  		<p>折叠面板：</p><br>
+			  		<div class="mt-panel-group">
+			  			<div class="mt-panel mt-panel-active">
+			  				<div class="mt-panel-header">
+			  					标题1
+			  				</div>
+			  				<div class="mt-panel-content">
+			  					内容区域... <br>
+			  					测试不一样的高度...
+			  				</div>
+			  			</div>
+			  			<div class="mt-panel">
+			  				<div class="mt-panel-header">
+			  					标题2
+			  				</div>
+			  				<div class="mt-panel-content">
+			  					内容区域... <br><br><br><br><br><br>
+			  					end...
+			  				</div>
+			  			</div>
+			  			<div class="mt-panel">
+			  				<div class="mt-panel-header">
+			  					标题3
+			  				</div>
+			  				<div class="mt-panel-content">
+			  					内容区域...
+			  				</div>
+			  			</div>
+			  		</div>
+			  </div>
+
+			  <div class="mt-g-4">
+			  		<p>折叠面板2：</p><br>
+			  		<div class="mt-panel-group">
+			  			<div class="mt-panel mt-panel-active">
+			  				<div class="mt-panel-header-one">
+			  					标题1
+			  				</div>
+			  				<div class="mt-panel-content">
+			  					内容区域... <br>
+			  					测试不一样的高度...
+			  				</div>
+			  			</div>
+			  			<div class="mt-panel">
+			  				<div class="mt-panel-header-one">
+			  					标题2
+			  				</div>
+			  				<div class="mt-panel-content">
+			  					内容区域... <br><br><br><br><br><br>
+			  					end...
+			  				</div>
+			  			</div>
+			  			<div class="mt-panel">
+			  				<div class="mt-panel-header-one">
+			  					标题3
+			  				</div>
+			  				<div class="mt-panel-content">
+			  					内容区域...
+			  				</div>
+			  			</div>
+			  		</div>
+			  </div>
+
+		</div>
+    </div><!--end mt-page-content-->
+	
+	<!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">下拉列表</h3>
+    	<div class="mt-g">
+
+			  <div class="mt-g-3">
+			  		<p>Click下拉列表：</p><br>
+					<div class="mt-dropdown">
+						<a href="javascript:;" class="mt-btn-blue ink-reaction mt-dropdown-toggle">下拉列表 <i class="iconfont icon-xia"></i></a>
+						<ul class="mt-dropdown-content">
+							<li>菜单1</li>
+							<li>菜单2</li>
+							<li>菜单3</li>
+							<li>菜单4</li>
+						</ul>
+					</div>
+			  </div>
+
+			  <div class="mt-g-3">
+			  		<p>Hover下拉列表：</p><br>
+					<div class="mt-dropdown">
+						<a href="javascript:;" class="mt-btn-green ink-reaction mt-dropdown-toggle-hover">下拉列表 <i class="iconfont icon-xia"></i></a>
+						<ul class="mt-dropdown-content">
+							<li>菜单1</li>
+							<li>菜单2</li>
+							<li>菜单3</li>
+							<li>菜单4</li>
+						</ul>
+					</div>
+			  </div>
+
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">模态弹窗</h3>
+    	<div class="mt-g">
+			<div class="mt-g-12">
+
+弹窗说明：<br>
+<pre>
+data-modal:
+	{
+		target:'#modalTest3', //绑定的弹窗ID
+		clickbgclose:false,  //点击背景，是否关闭弹窗
+		width:300, //弹窗宽度
+		height:200, //弹窗高度
+		data:{ //自定义参数，在弹窗中可以通过 {{自定义参数名称}} 获取对应的值
+				title:'我是个任性的表单',
+				name:'mantou',
+				age:24
+			} 
+	}
+</pre>
+
+				<a href="javascript:;" class="mt-btn-green ink-reaction mt-modal-btn" data-modal="{target:'#modalTest', clickbgclose:true, width:400, height:250, data:{name:'test',sex:110}}">弹窗背景可点击</a>
+
+				<a href="javascript:;" class="mt-btn-red ink-reaction mt-modal-btn" data-modal="{target:'#modalTest', clickbgclose:false, width:400, height:250, data:{name:'mantou',sex:200}}">弹窗背景不可点</a>
+
+				<a href="javascript:;" class="mt-btn-yellow ink-reaction mt-modal-btn" data-modal="{target:'#modalTest2', clickbgclose:false, width:400, height:250, data:{title:'好牛X的弹窗啊！'}}">带头部，表单弹窗</a>
+
+				<a href="javascript:;" class="mt-btn-blue ink-reaction mt-modal-btn" data-modal="{target:'#modalTest3', clickbgclose:false, width:300, height:200, data:{title:'我是个任性的表单',name:'mantou',age:24} }">表单赋值</a>
+
+			</div>
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">Popup弹窗</h3>
+    	<div class="mt-g">
+			<div class="mt-g-12">
+
+JS提示框说明：<br>
+<pre>
+JS调用：
+$.popup({
+	title:'系统提示',
+    str: '系统提示信息！', //弹窗文字
+    icon : '', //默认标记 有4个值：success，warning，danger，loading
+    time : null, //自动关闭,  如果有值，一定时间会自动关闭
+    clickback : false ,//点击按钮的回调函数 return :mark,$da
+    closeback : false, //关闭时的回调函数  return :$da
+    bgshow : true, //是否要显示半透明的黑色背景？
+    color: '#000',// 背景黑色 和白色
+    fadetime : 500, //渐变动画时间
+    showbtn : false, //是否显示按钮 false,1,2
+    width: 200, //弹窗宽度
+    height: 'auto', //弹窗高度
+    drag : false, //是否可拖动
+    close: true //是否要点击背景关闭？
+});
+</pre>
+
+				<a href="javascript:;" class="mt-btn-green ink-reaction" id="showpopup1">JS弹窗1</a>
+				<a href="javascript:;" class="mt-btn-red ink-reaction" id="showpopup2">JS弹窗2</a>
+				<a href="javascript:;" class="mt-btn-yellow ink-reaction" id="showpopup3">JS弹窗3</a>
+				<a href="javascript:;" class="mt-btn-blue ink-reaction" id="showpopup4">JS弹窗4</a>
+			</div>
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">Tips提示框</h3>
+    	<div class="mt-g">
+			<div class="mt-g-12">
+				<a href="javascript:;" class="mt-btn-green ink-reaction" data-mt-tips="{pst:'top',str:'这个是提示信息!',trigger:'hover',animate:'fadeInDown'}">Tips提示上</a>
+				<a href="javascript:;" class="mt-btn-red ink-reaction" data-mt-tips="{pst:'bottom',str:'这个是提示信息!',trigger:'hover',animate:'fadeInUp'}">Tips提示下</a>
+				<a href="javascript:;" class="mt-btn-yellow ink-reaction" data-mt-tips="{pst:'left',str:'这个是提示信息!',trigger:'hover'}">Tips提示左</a>
+				<a href="javascript:;" class="mt-btn-blue ink-reaction" data-mt-tips="{pst:'right',str:'这个是提示信息!',trigger:'hover'}">Tips提示右</a>
+			</div>
+
+			<div class="mt-g-12">
+				<a href="javascript:;" class="mt-btn-green ink-reaction" data-mt-tips="{pst:'top',str:'这个是提示信息!',trigger:'click'}">Tips提示上</a>
+				<a href="javascript:;" class="mt-btn-red ink-reaction" data-mt-tips="{pst:'bottom',str:'这个是提示信息!',trigger:'click'}">Tips提示下</a>
+				<a href="javascript:;" class="mt-btn-yellow ink-reaction" data-mt-tips="{pst:'left',str:'这个是提示信息!',trigger:'click'}">Tips提示左</a>
+				<a href="javascript:;" class="mt-btn-blue ink-reaction" data-mt-tips="{pst:'right',str:'这个是提示信息!',trigger:'click'}">Tips提示右</a>
+			</div>
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">Tab切换</h3>
+    	<div class="mt-g">
+			<div class="mt-g-4">
+
+				<p>高度固定，可拖动的Tab切换</p><br><br>
+				
+				<div class="mt-tabs" data-tabs="{autoh:false,drag:true}">
+					<ul class="mt-tabs-header">
+						<li class="mt-tabs-active"><a href="javascript: void(0)">流浪</a></li>
+						<li><a href="javascript: void(0)">流浪</a></li>
+						<li><a href="javascript: void(0)">流浪</a></li>
+						<li><a href="javascript: void(0)">流浪</a></li>
+					</ul>
+					<div class="mt-tabs-content">
+						<div class="mt-tabs-wrap">
+							<div class="mt-tabs-item mt-tabs-active">
+								可以用手拖动的<br>
+								tab酷炫切换效果<br>
+								<br>
+								<br>
+								...end
+							</div>
+							<div class="mt-tabs-item">
+								馒头出品。必属精品~ <br>
+								<br>
+								<br>
+								...end
+							</div>
+							<div class="mt-tabs-item">
+								高度可以自动适应
+							</div>
+							<div class="mt-tabs-item">
+								也可以设置固定的高度<br><br>
+							</div>
+						</div>
+					</div>
+				</div><!--end mt-tabs-->
+
+			</div>
+
+			<div class="mt-g-4">
+
+				<p>高度自动适应，不可拖动的Tab切换</p><br><br>
+				
+				<div class="mt-tabs" data-tabs="{autoh:true,drag:false}">
+					<ul class="mt-tabs-header">
+						<li class="mt-tabs-active"><a href="javascript: void(0)">流浪</a></li>
+						<li><a href="javascript: void(0)">流浪</a></li>
+						<li><a href="javascript: void(0)">流浪</a></li>
+						<li><a href="javascript: void(0)">流浪</a></li>
+					</ul>
+					<div class="mt-tabs-content">
+						<div class="mt-tabs-wrap">
+							<div class="mt-tabs-item mt-tabs-active">
+								可以用手拖动的<br>
+								tab酷炫切换效果<br>
+								<br>
+								<br>
+								...end
+							</div>
+							<div class="mt-tabs-item">
+								馒头出品。必属精品~ <br>
+								<br>
+								<br>
+								...end
+							</div>
+							<div class="mt-tabs-item">
+								高度可以自动适应
+							</div>
+							<div class="mt-tabs-item">
+								也可以设置固定的高度<br><br>
+							</div>
+						</div>
+					</div>
+				</div><!--end mt-tabs-->
+
+			</div>
+
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--触发器-->
+    <div class="mt-page-content"> 
+    	<h3 class="mt-padding">触发器</h3>
+    	<div class="mt-g">
+    		<div class="mt-g-4">
+    			<button class="mt-btn-red ink-reaction" data-mt-toggle="{target:'#testId',cls:'test2'}">添加CLASS</button>
+    			<div class="test1" id="testId">给我添加class ( data-mt-toggle="{target:'#testId',cls:'test2'}" )</div>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">分页</h3>
+
+
+<pre>
+//分页插件调用
+//分页
+var nowp = $("#pageList1").pagelist({
+      callback: function(page,maxcount){
+      	console.log("您选择了页码：",page);
+      	ajaxDo(page);
+      }
+});
+//ajax方法
+var ajaxDo = function(page,maxcount){
+	console.log("ajax doing..."+page);
+
+	//模拟ajax方法
+	setTimeout(function(){
+    	var data = {
+    		nowpage:page,
+		    count:300,
+		    maxcount:maxcount
+    	}
+    	nowp.refresh(data);
+    },500);
+}
+//默认加载第一页
+ajaxDo(1,20);
+</pre>
+
+    	<div class="mt-g">
+    		<div class="mt-g-8">
+
+    			<div class="" id="pageList1"></div>
+
+    		</div>
+    	</div>
+    </div>
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">查看大图</h3>
+    	<div class="mt-g">
+    		<img data-group="g1" src="../assets/images/add1.jpg" data-src="../assets/images/max.jpg">
+    		<img data-group="g1" src="../assets/images/add1.jpg" data-src="../assets/images/add3.jpg">
+    		<img data-group="g1" src="../assets/images/add1.jpg" data-src="../assets/images/add4.jpg">
+    	</div>
+
+    	<div class="mt-g">
+    		<img data-group="g2" src="../assets/images/add2.jpg" data-src="../assets/images/add5.jpg">
+    		<img data-group="g2" src="../assets/images/add2.jpg" data-src="../assets/images/add6.jpg">
+    		<img data-group="g2" src="../assets/images/add2.jpg" data-src="../assets/images/add7.jpg">
+    	</div>
+    </div>
+    <script>
+    $(function(){
+    	$('img[data-group="g1"]').mtShowMaxPic();
+    	$('img[data-group="g2"]').mtShowMaxPic();
+    })
+    </script>
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">滚动检测1</h3>
+    	<p>配合 animate.css 动画使用，正常加载</p>
+    	<div class="mt-g scrollspyTest">
+			<div data-mt-scrollspy="{cls:'animated fadeInRight', repeat: true}">1</div>
+			<div data-mt-scrollspy="{cls:'animated fadeInRight', repeat: true}">2</div>
+			<div data-mt-scrollspy="{cls:'animated fadeInRight', repeat: true}">3</div>
+			<div data-mt-scrollspy="{cls:'animated fadeInRight', repeat: true}">4</div>
+			<div data-mt-scrollspy="{cls:'animated fadeInRight', repeat: true}">5</div>
+			<div data-mt-scrollspy="{cls:'animated fadeInRight', repeat: true}">6</div>
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">滚动检测2</h3>
+    	<p>配合 animate.css 动画使用 ，延迟加载，设置css：opacity</p>
+    	<div class="mt-g scrollspyTest" data-mt-scrollspy="{cls:'animated fadeInRight', target:'.test3', delay:300, repeat:true}">
+			<div class="test3">1</div>
+			<div class="test3">2</div>
+			<div class="test3">3</div>
+			<div class="test3">4</div>
+			<div class="test3">5</div>
+			<div class="test3">6</div>
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">滚动检测+IMG预加载</h3>
+    	<p>可配合 animate.css 动画使用，图片的预加载</p>
+    	<div class="mt-g scrollspyTest">
+			<img src="../assets/images/img.png" data-mt-imgload="{cls:'animated fadeIn',delay:0,src:'../assets/images/add1.jpg'}">
+			<img src="../assets/images/img.png" data-mt-imgload="{cls:'animated fadeIn',delay:300,src:'../assets/images/add2.jpg'}">
+			<img src="../assets/images/img.png" data-mt-imgload="{cls:'animated fadeIn', delay:600,src:'../assets/images/add3.jpg'}">
+			<img src="../assets/images/img.png" data-mt-imgload="{cls:'animated fadeIn', delay:900,src:'../assets/images/add4.jpg'}">
+			<img src="../assets/images/img.png" data-mt-imgload="{cls:'animated fadeIn', delay:1200,src:'../assets/images/add5.jpg'}">
+			<img src="../assets/images/img.png" data-mt-imgload="{cls:'animated fadeIn', delay:1500,src:'../assets/images/add6.jpg'}">
+		</div>
+    </div><!--end mt-page-content-->
+
+</div>
+
+<!--模态弹窗-->
+<div class="mt-modal-dialog" id="modalTest">
+	<a href="javascript:;" class="mt-modal-close"><i class="iconfont icon-shanchu"></i></a>
+	姓名：{{name}} <br>
+	年龄：{{sex}} 
+</div>
+
+<!--模态弹窗2-->
+<div class="mt-modal-dialog" id="modalTest2">
+	<div class="mt-dialog-title">
+		{{title}} 
+		<a href="javascript:;" class="mt-modal-close"><i class="iconfont icon-shanchu"></i></a>
+	</div>
+	<div class="mt-dialog-content">
+		这里显示内容区域...
+	</div>
+</div>
+
+<!--模态弹窗3-->
+<div class="mt-modal-dialog" id="modalTest3">
+	<div class="mt-dialog-title">
+		{{title}} 
+		<a href="javascript:;" class="mt-modal-close"><i class="iconfont icon-shanchu"></i></a>
+	</div>
+	<div class="mt-dialog-content">
+		<div class="mt-form">
+			<div class="mt-input-block">
+	  			<input type="text" value="{{name}}" placeholder="姓名" data-validate="{validate:{notempty:'不能为空！',letter:'请输入英文姓名！'},style:'fadeRight'}">
+	  		</div><br>
+	  		<div class="mt-input-block">
+	  			<input type="text" value="{{age}}" placeholder="年龄" data-validate="{validate:{notempty:'不能为空！',intege1:'请输入正确的年龄'},style:'fadeRight'}">
+	  		</div><br>
+	  		<a href="javascript:;" class="mt-submit mt-btn-block mt-btn-green ink-reaction">提交数据</a>
+  		</div>
+	</div>
+</div>
+
+<!--footer-->
+<include src="public/footer.html"></include>
+
+<script>
+$(function(){
+
+	$("#showpopup1").on('click', function(event) {
+		$.popup({
+			title:'系统提示',
+            str: '系统提示信息！', //弹窗文字
+            icon : '', //默认标记 有4个值：success，warning，danger，loading
+            time : null, //自动关闭,  如果有值，一定时间会自动关闭
+            clickback : false ,//点击按钮的回调函数 return :mark,$da
+            closeback : false, //关闭时的回调函数  return :$da
+            bgshow : true, //是否要显示半透明的黑色背景？
+            color: '#000',// 背景黑色 和白色
+            fadetime : 500, //渐变动画时间
+            showbtn : 2, //是否显示按钮 false,1,2
+            width: 200, //弹窗宽度
+            height: 'auto', //弹窗高度
+            drag : false, //是否可拖动
+            close: true //是否要点击背景关闭？
+		});
+	});
+
+	$("#showpopup2").on('click', function(event) {
+		$.popup({
+			title:'系统提示2',
+			titlebg:'red',
+            str: '出错了！', //弹窗文字
+            icon : 'danger', //默认标记 有4个值：success，warning，danger，loading
+            time : null, //自动关闭,  如果有值，一定时间会自动关闭
+            clickback : false ,//点击按钮的回调函数 return :mark,$da
+            closeback : false, //关闭时的回调函数  return :$da
+            bgshow : true, //是否要显示半透明的黑色背景？
+            fadetime : 500, //渐变动画时间
+            showbtn : false, //是否显示按钮 false,1,2
+            width: 260, //弹窗宽度
+            height: 'auto', //弹窗高度
+            drag : false, //是否可拖动
+            close: false //是否要点击背景关闭？
+		});
+	});
+
+	var p3 = null;
+	$("#showpopup3").on('click', function(event) {
+		p3 = $.popup({
+			title:'系统提示3',
+			titlebg:'blue',
+            str: 'loading...', //弹窗文字
+            icon : 'loading', //默认标记 有4个值：success，warning，danger，loading
+            time : null, //自动关闭,  如果有值，一定时间会自动关闭
+            clickback : false ,//点击按钮的回调函数 return :mark,$da
+            closeback : false, //关闭时的回调函数  return :$da
+            bgshow : true, //是否要显示半透明的黑色背景？
+            fadetime : 500, //渐变动画时间
+            showbtn : false, //是否显示按钮 false,1,2
+            width: 200, //弹窗宽度
+            height: 'auto', //弹窗高度
+            drag : false, //是否可拖动
+            close: false //是否要点击背景关闭？
+		});
+
+		setTimeout(function(){
+			p3.close();
+		},3000);
+	});
+
+	$("#showpopup4").on('click', function(event) {
+		$.popup({
+			title:'系统提示4',
+			titlebg:'green',
+            str: '3秒后自动关闭！', //弹窗文字
+            icon : '', //默认标记 有4个值：success，warning，danger，loading
+            time : 3000, //自动关闭,  如果有值，一定时间会自动关闭
+            clickback : false ,//点击按钮的回调函数 return :mark,$da
+            closeback : false, //关闭时的回调函数  return :$da
+            bgshow : false, //是否要显示半透明的黑色背景？
+            fadetime : 500, //渐变动画时间
+            showbtn : false, //是否显示按钮 false,1,2
+            width: 200, //弹窗宽度
+            height: 'auto', //弹窗高度
+            drag : false, //是否可拖动
+            close: false //是否要点击背景关闭？
+		});
+	});
+
+
+
+	//分页
+	var nowp = $("#pageList1").pagelist({
+	      callback: function(page,maxcount){
+	      	console.log("您选择了页码：",page);
+	      	ajaxDo(page,maxcount);
+	      }
+    });
+
+	var ajaxDo = function(page,maxcount){
+		console.log("ajax doing..."+page);
+		setTimeout(function(){
+	    	var data = {
+	    		nowpage:page,
+			    count:300,
+			    maxcount:maxcount
+	    	}
+	    	nowp.refresh(data);
+	    },10);
+	}
+
+	//默认加载第一页
+	ajaxDo(1,20);
+
+});
+</script>
+</body>
+</html>

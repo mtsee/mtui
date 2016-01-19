@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1451287826_8041224.css">
+<!-- <link rel="stylesheet" type="text/css" href="../assets/css/amazeui.css" /> -->
+<link rel="stylesheet" type="text/css" href="../assets/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/mtui.css" />
+<!--[if lt IE 9]>
+<script src="../assets/script/plugin/jquery-1.11.2.js"></script>
+<script src="../assets/script/public/html5.js"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../assets/script/plugin/jquery-2.1.1.js"></script>
+<!--<![endif]-->
+<!-- <script src="../assets/script/plugin/amazeui.js"></script> -->
+<script src="../assets/script/plugin/plus.js"></script>
+<script src="../assets/script/plugin/mtui.js"></script>
+<script src="../assets/script/seajs/sea.js"></script>
+</head>
+<body>
+<!--header-->
+<!--头部-->
+<div class="mt-header">
+	
+	<a href="#" class="mt-sidemenu-arrow">
+		<i class="iconfont icon-xiao75"></i>
+	</a>
+
+	<!--菜单-->
+	<div class="mt-header-menu">
+		<i class="iconfont icon-caidan"></i>
+		<ul class="mt-sub-menu animated fadeInRight">
+			<li><a href="#">测试导航1</a></li>
+			<li><a href="#">测试导航2</a></li>
+			<li><a href="#">测试导航3</a></li>
+			<li><a href="#">测试导航4</a></li>
+		</ul>
+	</div>
+
+	<!--搜索-->
+	<div class="mt-header-search">
+		<input type="text" class="mt-input">
+		<a href="#" class="search-btn"><i class="iconfont icon-sousuo1"></i></a>
+	</div>
+
+	<!--其他菜单-->
+	<div class="mt-header-othermenu">
+		<div class="mt-header-menu">
+			<i class="iconfont icon-gerenzhongxin"></i>
+			<ul class="mt-sub-menu animated fadeInRight">
+				<li><a href="#">测试导航1</a></li>
+				<li><a href="#">测试导航2</a></li>
+				<li><a href="#">测试导航3</a></li>
+				<li><a href="#">测试导航4</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div><!--end mt-header-->
+
+<!--menu-->
+<!--侧面导航栏-->
+<div class="mt-sidemenu">
+	<!--LOGO-->
+	<div class="mt-logo">
+		<h1>BBD</h1>
+	</div>
+	
+	<!--导航-->
+	<div class="mt-sidenav">
+		<ul class="mt-sidenav-ul">
+			<li data-sidename="index">
+				<a class="ink-reaction" href="index.html">
+					<i class="iconfont icon-zhuye"></i>
+					<span>主页</span>
+				</a>
+			</li>
+			<li data-sidename="form">
+				<a href="form.html">
+					<i class="iconfont icon-iconfontbiaodandingyi"></i>
+					<span>表单</span>
+				</a>
+			</li>
+			<li data-sidename="button">
+				<a href="button.html">
+					<i class="iconfont icon-uibutton"></i>
+					<span>按钮</span>
+				</a>
+			</li>
+			<li data-sidename="grid">
+				<a href="grid.html">
+					<i class="iconfont icon-fenping"></i>
+					<span>分栏</span>
+				</a>
+			</li>
+			<li data-sidename="table">
+				<a href="table.html">
+					<i class="iconfont icon-iconbiaoge"></i>
+					<span>表格</span>
+				</a>
+			</li>
+			<li data-sidename="plus">
+				<a href="plus.html">
+					<i class="iconfont icon-chajian"></i>
+					<span>插件</span>
+				</a>
+			</li>
+			<li data-sidename="img">
+				<a href="img.html">
+					<i class="iconfont icon-tupian"></i>
+					<span>图片</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+//菜单选中状态
+$(function(){
+	var $ul = $(".mt-sidenav-ul");
+	var $li = $ul.find('li');
+	var winHei = $(window).height();
+
+	//菜单动画
+	var sidenavAnimate = function(){
+		var liLen = $li.length;
+		var ulHei = $ul.height()+50;
+		var x = (ulHei-winHei)/(liLen-1);
+		if(ulHei - winHei <= 0)return;
+		$(".mt-sidenav").on('mouseover', 'li', function(event) {
+			var index = $(this).index();
+			$ul.css({
+				top: -index*x
+			});
+		});
+	};
+
+	//菜单选中状态
+	var setActiveForSidenav = function(){
+		$("li[data-sidename='button']").addClass('mt-active');
+	};
+
+
+	//init
+	sidenavAnimate();
+	setActiveForSidenav();
+});
+</script> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+    
+    <!--page-header-->
+    <div class="mt-page-header">
+    	<h1>Button</h1>
+    </div>
+	
+	<!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">按钮颜色</h3>
+    	<div class="mt-g">
+
+			  <div class="mt-g-4">
+			  		<p>普通按钮：</p><br>
+			  		<a href="javascript:;" class="mt-btn-grey">灰色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-red">红色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-yellow">黄色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-green">绿色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-blue">蓝色按钮</a>
+			  </div>
+
+			  <div class="mt-g-4">
+			  		<p>圆角按钮：</p><br>
+					<a href="javascript:;" class="mt-btn-round-grey">灰色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-round-red">红色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-round-yellow">黄色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-round-green">绿色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-round-blue">蓝色按钮</a>
+			  </div>
+
+			  <div class="mt-g-4">
+			  		<p>特效按钮：</p><br>
+					<a href="javascript:;" class="mt-btn-grey ink-reaction">灰色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-red ink-reaction">红色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-yellow ink-reaction">黄色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-green ink-reaction">绿色按钮</a>
+			  		<a href="javascript:;" class="mt-btn-blue ink-reaction">蓝色按钮</a>
+			  </div>
+
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">按钮尺寸</h3>
+    	<div class="mt-g">
+
+			  <div class="mt-g-12">
+			  		<span class="mt-margin">mt-btn-xl</span>
+			  		<a href="javascript:;" class="mt-btn-blue mt-btn-xl ink-reaction">蓝色按钮</a>
+
+			  		<span class="mt-margin">mt-btn-lg</span>
+			  		<a href="javascript:;" class="mt-btn-blue mt-btn-lg ink-reaction">蓝色按钮</a>
+
+			  		<span class="mt-margin">默认大小</span>
+			  		<a href="javascript:;" class="mt-btn-blue ink-reaction">蓝色按钮</a>
+
+			  		<span class="mt-margin">mt-btn-sm</span>
+			  		<a href="javascript:;" class="mt-btn-blue mt-btn-sm ink-reaction">蓝色按钮</a>
+
+			  		<span class="mt-margin">mt-btn-xs</span>
+			  		<a href="javascript:;" class="mt-btn-blue mt-btn-xs ink-reaction">蓝色按钮</a>
+			  </div>
+
+			  <div class="mt-g-4">
+			  		<p>block按钮：</p><br>
+			  		<a href="javascript:;" class="mt-btn-grey mt-btn-block ink-reaction">灰色按钮</a><br>
+			  		<a href="javascript:;" class="mt-btn-red mt-btn-block ink-reaction">红色按钮</a><br>
+			  		<a href="javascript:;" class="mt-btn-yellow mt-btn-block ink-reaction">黄色按钮</a><br>
+			  		<a href="javascript:;" class="mt-btn-green mt-btn-block ink-reaction">绿色按钮</a><br>
+			  		<a href="javascript:;" class="mt-btn-blue mt-btn-block ink-reaction">蓝色按钮</a><br>
+			  </div>
+
+		</div>
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">组合按钮</h3>
+    	<div class="mt-g">
+
+			  <div class="mt-g-12">
+					<p>图标+按钮：</p><br>
+					<a href="javascript:;" class="mt-btn-grey ink-reaction"><i class="iconfont icon-zhuye"></i> 主页</a>
+			  		<a href="javascript:;" class="mt-btn-red ink-reaction"><i class="iconfont icon-yonghu"></i> 用户</a>
+			  		<a href="javascript:;" class="mt-btn-yellow ink-reaction"><i class="iconfont icon-duigou"></i> 正确</a>
+			  		<a href="javascript:;" class="mt-btn-green ink-reaction"><i class="iconfont icon-shangchuan"></i> 上传文件</a>
+			  		<a href="javascript:;" class="mt-btn-blue ink-reaction"><i class="iconfont icon-icon46"></i> 下载按钮</a>
+			  </div>
+
+			  <div class="mt-g-12">
+			  		<span class="mt-margin">mt-btn-xl</span>
+			  		<a href="javascript:;" class="mt-btn-grey mt-btn-xl ink-reaction"><i class="iconfont icon-zhuye"></i> 主页</a>
+
+			  		<span class="mt-margin">mt-btn-lg</span>
+			  		<a href="javascript:;" class="mt-btn-red mt-btn-lg ink-reaction"><i class="iconfont icon-yonghu"></i> 用户</a>
+
+			  		<span class="mt-margin">默认大小</span>
+			  		<a href="javascript:;" class="mt-btn-yellow ink-reaction"><i class="iconfont icon-duigou"></i> 正确</a>
+
+			  		<span class="mt-margin">mt-btn-sm</span>
+			  		<a href="javascript:;" class="mt-btn-green mt-btn-sm ink-reaction"><i class="iconfont icon-shangchuan"></i> 上传文件</a>
+
+			  		<span class="mt-margin">mt-btn-xs</span>
+			  		<a href="javascript:;" class="mt-btn-blue mt-btn-xs ink-reaction"><i class="iconfont icon-icon46"></i> 下载按钮</a>
+			  </div>
+
+		</div>
+    </div><!--end mt-page-content-->
+
+</div>
+
+<!--footer-->
+<footer>footer</footer>
+
+</body>
+</html>

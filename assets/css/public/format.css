@@ -1,0 +1,195 @@
+/* ---------------CSS 格式化------------------------ */
+*:not(input,textarea) {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+  -webkit-touch-callout: inherit;
+  -webkit-user-select: auto;
+  outline: none;
+}
+html {
+  height: 100%;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑", "Microsoft YaHei", "STHeiti Light [STXihei]", "STHeiti";
+  -webkit-touch-callout: inherit ;
+  -webkit-user-select: auto ;
+  font-size: 14px;
+  position: relative;
+  word-break: break-all;
+  float: left;
+}
+i,
+em {
+  font-style: normal;
+}
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: #4a89dc;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+  border: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td,
+caption {
+  vertical-align: middle;
+}
+textarea {
+  resize: none;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+p,
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-weight: normal;
+  font-style: normal;
+}
+strong {
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+label {
+  padding-right: 10px;
+}
+.iconfont {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  overflow: hidden;
+}
+/*清除浮动*/
+.clear {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  width: 100%;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/**
+ * Fix the flawed CSS box model - Yes, IE6's box model is better
+ * Browser support: IE8+
+ * via: http://paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* normalize.css v3.0.2 | git.io/normalize */
+/* Set <html> and <body> to inherit the height of the viewport */
+html,
+body {
+  min-height: 100%;
+}
+/**
+ * 1. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+ */
+html {
+  -ms-text-size-adjust: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 1 */
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.25em;
+}
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  margin-top: 2em;
+}
+input[type=text][disabled],
+input[type=password][disabled] {
+  background: #f3f3f3!important;
+  color: #ccc!important;
+}
+input[type=text][disabled] + .mt-iconbtn,
+input[type=password][disabled] + .mt-iconbtn {
+  color: #ccc!important;
+  z-index: 11;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #F5F5F5;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ccc;
+}

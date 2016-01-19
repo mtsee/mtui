@@ -1,0 +1,42 @@
+<div class="mt-pagelist clearfix" id="pageList{{num}}">
+    <div class="mt-pagelist-left">
+        <div class="mt-select">
+            <div class="mt-select-title" data-val="10">10条/页</div>
+            <i class="iconfont icon-xia"></i>
+            <ul class="mt-select-box">
+                <li class="option" data-val="10">10条/页</li>
+                <li class="option" data-val="20">20条/页</li>
+                <li class="option" data-val="50">50条/页</li>
+            </ul>
+        </div>
+        <span>共 <em class="mt-pagelist-count">0</em> 页</span>
+    </div>
+    <div class="mt-pagelist-right">
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-prev">上一页</a>
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-btn mt-pagelist-runprev"><i class="iconfont icon-duduyinleappicon0501"></i></a>
+        <div class="mt-pagelist-content">
+            <ul class="mt-pagelist-page"></ul>
+        </div>
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-btn mt-pagelist-runnext"><i class="iconfont icon-duduyinleappicon1401"></i></a>
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-next">下一页</a>
+        <span class="mt-pagelist-input">
+            第<input class="mt-input" type="text">页
+        </span>
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-btn">跳转</a>
+    </div>
+</div>
+
+<script>
+$(function(){
+    $("#pageListundefined").each(function(index, el) {
+        $(this).pagelist({
+              nowpage:1,
+              count:215,
+              maxcount:20,
+              callback: function(page){
+                console.log("您选择了页码：",page);
+              }
+        }); 
+    });
+});
+</script>

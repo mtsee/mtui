@@ -1,0 +1,88 @@
+<!--侧面导航栏-->
+<div class="mt-sidemenu">
+	<!--LOGO-->
+	<div class="mt-logo">
+		<h1>浩格云信</h1>
+	</div>
+	
+	<!--导航-->
+	<div class="mt-sidenav">
+		<ul class="mt-sidenav-ul">
+			<li data-sidename="index">
+				<a class="ink-reaction" href="index.html">
+					<i class="iconfont icon-zhuye"></i>
+					<span>主页</span>
+				</a>
+			</li>
+			<li data-sidename="form">
+				<a href="form.html">
+					<i class="iconfont icon-iconfontbiaodandingyi"></i>
+					<span>表单</span>
+				</a>
+			</li>
+			<li data-sidename="button">
+				<a href="button.html">
+					<i class="iconfont icon-uibutton"></i>
+					<span>按钮</span>
+				</a>
+			</li>
+			<li data-sidename="grid">
+				<a href="grid.html">
+					<i class="iconfont icon-fenping"></i>
+					<span>分栏</span>
+				</a>
+			</li>
+			<li data-sidename="table">
+				<a href="table.html">
+					<i class="iconfont icon-iconbiaoge"></i>
+					<span>表格</span>
+				</a>
+			</li>
+			<li data-sidename="plus">
+				<a href="plus.html">
+					<i class="iconfont icon-chajian"></i>
+					<span>插件</span>
+				</a>
+			</li>
+			<li data-sidename="img">
+				<a href="img.html">
+					<i class="iconfont icon-tupian"></i>
+					<span>图片</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+//菜单选中状态
+$(function(){
+	var $ul = $(".mt-sidenav-ul");
+	var $li = $ul.find('li');
+	var winHei = $(window).height();
+
+	//菜单动画
+	var sidenavAnimate = function(){
+		var liLen = $li.length;
+		var ulHei = $ul.height()+50;
+		var x = (ulHei-winHei)/(liLen-1);
+		if(ulHei - winHei <= 0)return;
+		$(".mt-sidenav").on('mouseover', 'li', function(event) {
+			var index = $(this).index();
+			$ul.css({
+				top: -index*x
+			});
+		});
+	};
+
+	//菜单选中状态
+	var setActiveForSidenav = function(){
+		$("li[data-sidename='{{data-menu}}']").addClass('mt-active');
+	};
+
+
+	//init
+	sidenavAnimate();
+	setActiveForSidenav();
+});
+</script>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <style>
+	.mt-g div{
+		background: #ccc;
+		margin: 2px;
+	}
+    </style>
+</head>
+<body>
+<!--header-->
+<include src="public/header.html"></include>
+
+<!--menu-->
+<include src="public/sideMenu.html" data-menu="grid"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+    
+    <!--page-header-->
+    <div class="mt-page-header">
+    	<h1>Grid</h1>
+    </div>
+	
+	<!--内容区域-->
+    <div class="mt-page-content">
+    	mt-page-content
+    </div><!--end mt-page-content-->
+
+    <!--内容区域-->
+    <div class="mt-page-content">
+    	<p>采用12栅格：</p><br>
+    	<div class="mt-g">
+    		<div class="mt-g-1">mt-g-1</div>
+    		<div class="mt-g-2">mt-g-2</div>
+    		<div class="mt-g-3">mt-g-3</div>
+    		<div class="mt-g-4">mt-g-4</div>
+    		<div class="mt-g-5">mt-g-5</div>
+    		<div class="mt-g-6">mt-g-6</div>
+    		<div class="mt-g-7">mt-g-7</div>
+    		<div class="mt-g-8">mt-g-8</div>
+    		<div class="mt-g-9">mt-g-9</div>
+    		<div class="mt-g-10">mt-g-10</div>
+    		<div class="mt-g-11">mt-g-11</div>
+    		<div class="mt-g-12">mt-g-12</div>
+    	</div>
+    </div><!--end mt-page-content-->
+
+</div>
+
+<!--footer-->
+<include src="public/footer.html"></include>
+
+</body>
+</html>

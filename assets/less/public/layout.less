@@ -1,0 +1,54 @@
+/*馒头UI grid 24多栏栅格 (A*n)-i=W i=4 n=24 A=4 */
+@gridMargin : 0;//0.2%; 
+@gridNum : 12; //24栅格
+@gridWid : 8.33333%;// (100 + 0.2)/12
+.mt-g{ 
+	position:relative;
+	&:after{ 
+		content:"";
+		display: block;
+		clear: both;
+		height: 0;
+		visibility: hidden;
+	}
+	//栅格函数
+	.mtGridFun(@gridNum);
+	.mtGridFun(@n, @i: 1) when (@i =< @n) {
+		//栅格公用样式
+		.mt-g-@{i} {
+			float:left;
+			margin-left:@gridMargin;
+			position:relative;
+			padding: 20px;
+			&:first-child{
+				margin-left:0;
+			}
+		}
+		//宽度
+		.mt-g-@{i} {
+			width: (@gridWid*@i - @gridMargin);
+		}
+		//偏距
+		.mt-g-offset-@{i} {
+			margin-left:@gridWid*@i;
+			&:first-child{
+				margin-left:@gridWid*@i;
+			}
+		}
+		.mtGridFun(@n, (@i + 1));
+	}
+  
+}
+/*居中*/
+.mt-g-center{
+	text-align: center;
+	.mtGridCenter(@gridNum);
+	.mtGridCenter(@n, @i: 1) when (@i =< @n) {
+		.mt-g-@{i} {
+			float:none;
+			display:inline-block;
+			text-align: left;
+		}
+		.mtGridCenter(@n, (@i + 1));
+	}
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head>
+<body>
+
+<!--header-->
+<include src="public/admin-header.html" data-name="消息推送"></include> 
+
+<!--menu-->
+<include src="public/admin-sideMenu.html" data-menu="system"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+
+  <div class="mt-content-1x admin-msg-send">
+    
+    <h3>消息推送</h3><br><br>
+    
+    <label class="admin-label">推送到：</label>
+    <label class="mt-checkbox"><input class="" type="checkbox" value="0"><i class="iconfont icon-duigou"></i> <span>全部</span></label>
+    <label class="mt-checkbox"><input type="checkbox" value="1"><i class="iconfont icon-duigou"></i> <span>代理商</span></label>
+    <label class="mt-checkbox"><input type="checkbox" value="2"><i class="iconfont icon-duigou"></i> <span>代理商客户</span></label>
+    <label class="mt-checkbox"><input type="checkbox" value="3"><i class="iconfont icon-duigou"></i> <span>终端机</span></label>
+    <label class="mt-checkbox"><input type="checkbox" value="4"><i class="iconfont icon-duigou"></i> <span>直销商</span></label>
+    <br><br>
+
+    <label class="admin-label">标题：</label>
+    <div class="mt-input">
+      <input type="text" name="subject" id="d-subject" placeholder="">
+    </div>
+    <br><br>
+    
+    <label class="admin-label">内容：</label>
+    <div class="mt-textarea">
+      <textarea name="content" id="d-content"></textarea>
+    </div>
+    <br><br>
+    
+    <a href="javascript:;" class="mt-btn-blue ink-reaction admin-save-btn" id="d-msgSend">提交</a>
+
+  </div>
+
+
+
+</div>
+
+
+</body>
+<script>
+$(function(){
+
+  $("#d-msgSend").on('click', function(e) {
+        var data = {
+           type : [],
+           subject : "",
+           content : ""
+        };
+        $(":checkbox").each(function(index, el) {
+           if($(this).is(':checked')){
+              data.type.push($(this).val()); 
+           }
+        });
+        data.subject = $("#d-subject").val();
+        data.content = $("#d-content").val();
+
+        console.log(data);
+  });
+
+});
+</script>
+</html>

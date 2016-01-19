@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head>
+<body>
+
+<!--header-->
+<include src="public/admin-header.html" data-name="添加员工"></include> 
+
+<!--menu-->
+<include src="public/admin-sideMenu.html" data-menu="member"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+
+  <div class="mt-content-1x admin-member-add">
+    
+    <h3>添加员工</h3><br><br>
+
+    <label class="admin-label">用户名：</label>
+    <div class="mt-input">
+      <input type="text" placeholder="请输入用户名">
+    </div>
+    <br><br>
+     
+    <label class="admin-label">密码：</label>
+    <div class="mt-input">
+      <input type="password" placeholder="请输入密码">
+    </div>
+    <br><br>
+
+    <label class="admin-label">确认密码：</label>
+    <div class="mt-input">
+      <input type="password" placeholder="请输入密码">
+    </div>
+    <br><br>
+
+    <label class="admin-label">职位：</label>
+    <div class="mt-select" style="width: 159px;">
+      <div class="mt-select-title">选择职位</div>
+      <i class="iconfont icon-xia"></i>
+      <ul class="mt-select-box">
+        <li class="option" data-val="小张">隔壁小张</li>
+        <li class="option" data-val="小红">隔壁小红</li>
+        <li class="option" data-val="小赵">隔壁小赵</li>
+        <li class="option" data-val="小飞">隔壁小飞</li>
+        <li class="option" data-val="老王">隔壁老王</li>
+      </ul>
+    </div>
+    <br><br>
+
+    <label class="admin-label">邮箱：</label>
+    <div class="mt-input">
+      <input type="text" placeholder="请输入用户名">
+    </div>
+    <br><br>
+
+    <label class="admin-label">电话：</label>
+    <div class="mt-input">
+      <input type="text" placeholder="请输入用户名">
+    </div>
+    <br><br>
+    
+    <a href="javascript:;" class="mt-btn-blue ink-reaction admin-save-btn">保存</a>
+
+  </div>
+
+</div> 
+
+</body>
+<script>
+$(function(){
+
+});
+</script>
+</html>

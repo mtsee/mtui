@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head> 
+<body>
+
+<!--header-->
+<include src="public/admin-header.html" data-name="客户详情"></include> 
+
+<!--menu-->
+<include src="public/admin-sideMenu.html" data-menu="guest"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+  
+  <div class="mt-content-1x">
+      
+      <div class="mt-tabs" data-tabs="{autoh:false,drag:false}">
+          <ul class="mt-tabs-header">
+            <li class="mt-tabs-active"><a href="javascript: void(0)">基本资料</a></li>
+            <li><a href="javascript: void(0)">开票信息</a></li>
+          </ul>
+          <div class="mt-tabs-content">
+            <div class="mt-tabs-wrap">
+              <div class="mt-tabs-item mt-tabs-active">
+
+                  <table class="mt-table mt-table-striped">
+                      <tr> <td class="admin-w100">用户名</td> <td>huangguanghu</td> </tr>
+                      <tr> <td>公司名称</td> <td>数联铭品</td> </tr>
+                      <tr> <td>座机</td> <td>huangguanghu</td> </tr>
+                      <tr> <td>手机</td> <td>13438261029</td> </tr>
+                      <tr> <td>邮箱</td> <td>280261148@qq.com</td> </tr>
+                      <tr> <td>地址</td> <td>世纪城</td> </tr>
+                  </table>
+
+              </div>
+              <div class="mt-tabs-item">
+
+                  <table class="mt-table mt-table-striped">
+                      <tr> <td class="admin-w100">注册场所地址</td> <td></td> </tr>
+                      <tr> <td>注册固定电话</td> <td></td> </tr>
+                      <tr> <td>基本户开户账号</td> <td></td> </tr>
+                      <tr> <td>税务等级复印件</td> <td><a href="javascript:;" class="mt-btn-grey">暂时没有上传图片</a></td> </tr>
+                      <tr> <td>营业执照复印件</td> <td><a href="javascript:;" class="mt-btn-grey">暂时没有上传图片</a></td> </tr>
+                      <tr> <td>一般纳税人资格认证复印件</td> <td><a href="javascript:;" class="mt-btn-grey">暂时没有上传图片</a></td> </tr>
+                      <tr> <td>上传权限开通</td> <td>未做</td> </tr>
+                  </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+
+</div>
+
+<script src="../assets/script/plugin/laydate/laydate.js"></script>
+</body>
+<script>
+$(function(){
+
+  //日历初始化
+  var arr = ['#a-date1','#a-date2','#a-date3','#a-date4','#e-date1','#e-date2','#e-date3','#e-date4','#s-date1','#s-date2','#s-date3','#s-date4'];
+  for (var i = 0; i < arr.length; i++) {
+    laydate({
+      elem: arr[i], //需显示日期的元素选择器
+          format: 'YYYY-MM-DD', // YYYY-MM-DD hh:mm:ss 日期格式
+          choose: function(dates){
+            console.log(dates);
+          } //选择好日期的回调
+    });
+  }
+
+});
+</script>
+</html>

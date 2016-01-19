@@ -1,0 +1,612 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1451265834_469517.css">
+<!-- <link rel="stylesheet" type="text/css" href="../assets/css/amazeui.css" /> -->
+<link rel="stylesheet" type="text/css" href="../assets/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/mtui.css" />
+<!--[if lt IE 9]>
+<script src="../assets/script/plugin/jquery-1.11.2.js"></script>
+<script src="../assets/script/public/html5.js"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../assets/script/plugin/jquery-2.1.1.js"></script>
+<!--<![endif]-->
+<!-- <script src="../assets/script/plugin/amazeui.js"></script> -->
+<script src="../assets/script/plugin/laydate/laydate.js"></script>
+<script src="../assets/script/plugin/plus.js"></script>
+<script src="../assets/script/plugin/mtui.js"></script>
+<script src="../assets/script/seajs/sea.js"></script>
+</head>
+<body>
+<!--header-->
+<!--头部-->
+<div class="mt-header">
+	
+	<a href="#" class="mt-sidemenu-arrow">
+		<i class="iconfont icon-xiao75"></i>
+	</a>
+
+	<!--菜单-->
+	<div class="mt-header-menu">
+		<i class="iconfont icon-caidan"></i>
+		<ul class="mt-sub-menu animated fadeInRight">
+			<li><a href="#">测试导航1</a></li>
+			<li><a href="#">测试导航2</a></li>
+			<li><a href="#">测试导航3</a></li>
+			<li><a href="#">测试导航4</a></li>
+		</ul>
+	</div>
+
+	<!--搜索-->
+	<div class="mt-header-search">
+		<input type="text" class="mt-input">
+		<a href="#" class="search-btn"><i class="iconfont icon-sousuo1"></i></a>
+	</div>
+
+	<!--其他菜单-->
+	<div class="mt-header-othermenu">
+		<div class="mt-header-menu">
+			<i class="iconfont icon-gerenzhongxin"></i>
+			<ul class="mt-sub-menu animated fadeInRight">
+				<li><a href="#">测试导航1</a></li>
+				<li><a href="#">测试导航2</a></li>
+				<li><a href="#">测试导航3</a></li>
+				<li><a href="#">测试导航4</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div><!--end mt-header-->
+
+<!--menu-->
+<!--侧面导航栏-->
+<div class="mt-sidemenu">
+	<!--LOGO-->
+	<div class="mt-logo">
+		<h1>BBD</h1>
+	</div>
+	
+	<!--导航-->
+	<div class="mt-sidenav">
+		<ul class="mt-sidenav-ul">
+			<li data-sidename="index">
+				<a class="ink-reaction" href="index.html">
+					<i class="iconfont icon-zhuye"></i>
+					<span>主页</span>
+				</a>
+			</li>
+			<li data-sidename="form">
+				<a href="form.html">
+					<i class="iconfont icon-iconfontbiaodandingyi"></i>
+					<span>表单</span>
+				</a>
+			</li>
+			<li data-sidename="button">
+				<a href="#">
+					<i class="iconfont icon-uibutton"></i>
+					<span>按钮</span>
+				</a>
+			</li>
+			<li data-sidename="grid">
+				<a href="#">
+					<i class="iconfont icon-fenping"></i>
+					<span>分栏</span>
+				</a>
+			</li>
+			<li data-sidename="plus">
+				<a href="#">
+					<i class="iconfont icon-chajian"></i>
+					<span>插件</span>
+				</a>
+			</li>
+			<li data-sidename="img">
+				<a href="#">
+					<i class="iconfont icon-tupian"></i>
+					<span>图片</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+//菜单选中状态
+$(function(){
+	var $ul = $(".mt-sidenav-ul");
+	var $li = $ul.find('li');
+	var winHei = $(window).height();
+
+	//菜单动画
+	var sidenavAnimate = function(){
+		var liLen = $li.length;
+		var ulHei = $ul.height()+50;
+		var x = (ulHei-winHei)/(liLen-1);
+		if(ulHei - winHei <= 0)return;
+		$(".mt-sidenav").on('mouseover', 'li', function(event) {
+			var index = $(this).index();
+			$ul.css({
+				top: -index*x
+			});
+		});
+	};
+
+	//菜单选中状态
+	var setActiveForSidenav = function(){
+		$("li[data-sidename='form']").addClass('mt-active');
+	};
+
+
+	//init
+	sidenavAnimate();
+	setActiveForSidenav();
+});
+</script> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+    
+    <!--page-header-->
+    <div class="mt-page-header">
+    	<h1>Form</h1>
+    </div>
+	
+	<!--内容区域-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">input</h3>
+    	<div class="mt-g">
+			  <div class="mt-g-4">
+			  		<label>输入框:</label>
+			  		<div class="mt-input">
+			  			<input type="text" placeholder="请输入用户名">
+			  		</div>
+					
+					<br><br>
+					
+					<label>block输入框:</label>
+			  		<div class="mt-input-block">
+			  			<input type="text">
+			  		</div>
+					
+					<br><br>
+
+					<label>图标合并:</label>
+			  		<div class="mt-input mt-icon-input">
+			  			<input type="text">
+			  			<a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-sousuo1"></i></a>
+			  		</div>
+					
+					<br><br>
+
+			  		<label>block图标合并:</label>
+			  		<div class="mt-input-block mt-icon-input">
+			  			<input type="text">
+			  			<a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-sousuo1"></i></a>
+			  		</div>
+
+			  		<br><br>
+					<label>圆角输入框:</label>
+			  		<div class="mt-input">
+			  			<input type="text" class="mt-round">
+			  		</div>
+
+			  		<br><br>
+					<label>block圆角输入框:</label>
+			  		<div class="mt-input-block">
+			  			<input type="text" class="mt-round">
+			  		</div>
+
+			  		<br><br>
+					<label>block圆角输入框图标合并:</label>
+			  		<div class="mt-input-block mt-icon-input">
+			  			<input type="text" class="mt-round">
+			  			<a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-sousuo1"></i></a>
+			  		</div>
+
+			  		
+			  </div>
+			  <div class="mt-g-4">
+			  		<label>密码输入框:</label>
+			  		<div class="mt-input">
+			  			<input type="password" placeholder="请输入密码">
+			  		</div>
+
+			  		<br><br>
+					<label>输入框图标合并:</label>
+			  		<div class="mt-input mt-icon-inputr">
+			  			<input type="text" class="">
+			  			<a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-yonghu"></i></a>
+			  		</div>
+
+			  		<br><br>
+					<label>密码框图标合并:</label>
+			  		<div class="mt-input mt-icon-inputr">
+			  			<input type="password" class="">
+			  			<a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-mima"></i></a>
+			  		</div>
+
+			  		<br><br>
+					<label>密码框图标合并disabled:</label>
+			  		<div class="mt-input mt-icon-inputr">
+			  			<input disabled="disabled" type="password" class="">
+			  			<a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-mima"></i></a>
+			  		</div>
+
+			  </div>
+			  <div class="mt-g-4">
+			  		
+			  </div>
+		</div>
+    </div><!--end mt-page-content-->
+
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">Checkbox</h3>
+		
+		<div class="mt-g">
+			<div class="mt-g-12">
+				<!--checkbox-->
+				<label class="mt-checkbox mt-checkbox-active">
+					<input type="checkbox" checked="checked">
+					<i class="iconfont icon-duigou"></i>
+					<span>checkbox1</span>
+				</label>
+
+				<!--checkbox-->
+				<label class="mt-checkbox">
+					<input type="checkbox">
+					<i class="iconfont icon-duigou"></i>
+					<span>checkbox2</span>
+				</label>
+
+				<!--checkbox-->
+				<label class="mt-checkbox">
+					<input type="checkbox">
+					<i class="iconfont icon-duigou"></i>
+					<span>checkbox3</span>
+				</label>
+
+				<!--checkbox-->
+				<label class="mt-checkbox">
+					<input type="checkbox" disabled="disabled">
+					<i class="iconfont icon-duigou"></i>
+					<span>checkbox3</span>
+				</label>
+
+				<!--checkbox-->
+				<label class="mt-checkbox mt-checkbox-active">
+					<input type="checkbox" disabled="disabled">
+					<i class="iconfont icon-duigou"></i>
+					<span>checkbox3</span>
+				</label>
+
+			</div>
+		</div>
+
+    </div><!--end mt-page-content-->
+
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">Radio</h3>
+
+    	<div class="mt-g">
+			<div class="mt-g-12">
+				
+				<!--checkbox-->
+				<label class="mt-radio">
+					<input type="radio" name="sex" value="男">
+					<i class="iconfont icon-radio"></i>
+					<span>男</span>
+				</label>
+
+				<!--checkbox-->
+				<label class="mt-radio">
+					<input type="radio" name="sex" value="女">
+					<i class="iconfont icon-radio"></i>
+					<span>女</span>
+				</label>
+
+				<!--checkbox-->
+				<label class="mt-radio">
+					<input type="radio" name="sex" disabled="disabled" value="中">
+					<i class="iconfont icon-radio"></i>
+					<span>中性</span>
+				</label>
+
+				<!--checkbox-->
+				<label class="mt-radio mt-radio-active">
+					<input type="radio" checked="checked" name="sex" disabled="disabled" value="无">
+					<i class="iconfont icon-radio"></i>
+					<span>无</span>
+				</label>
+				
+				<br><br>
+
+				<a href="javascript:;" id="getRadio">获取radio的值</a>
+
+			</div>
+		</div>
+    </div><!--end mt-page-content-->
+	
+	<!--下拉选择-->
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">Select</h3>
+
+    	<div class="mt-g">
+			<div class="mt-g-12">
+				
+				<label>下拉选择：</label>
+				<div class="mt-select">
+					<div class="mt-select-title">隔壁邻居是？</div>
+					<i class="iconfont icon-xia"></i>
+					<ul class="mt-select-box">
+						<li class="option" data-val="小张">隔壁小张</li>
+						<li class="option" data-val="小红">隔壁小红</li>
+						<li class="option" data-val="小赵">隔壁小赵</li>
+						<li class="option" data-val="小飞">隔壁小飞</li>
+						<li class="option" data-val="老王">隔壁老王</li>
+					</ul>
+				</div>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<label>超出260的高度，自动出现滚动条：</label>
+				<div class="mt-select">
+					<div class="mt-select-title">隔壁邻居是？</div>
+					<i class="iconfont icon-xia"></i>
+					<ul class="mt-select-box">
+						<li class="option" data-val="小张">隔壁小张</li>
+						<li class="option" data-val="小红">隔壁小红</li>
+						<li class="option" data-val="小赵">隔壁小赵</li>
+						<li class="option" data-val="小飞">隔壁小飞</li>
+						<li class="option" data-val="老王">隔壁老王</li>
+						<li class="option" data-val="小张">隔壁小张</li>
+						<li class="option" data-val="小红">隔壁小红</li>
+						<li class="option" data-val="小赵">隔壁小赵</li>
+						<li class="option" data-val="小飞">隔壁小飞</li>
+						<li class="option" data-val="老王">隔壁老王</li>
+						<li class="option" data-val="小红">隔壁小红</li>
+						<li class="option" data-val="小赵">隔壁小赵</li>
+						<li class="option" data-val="小飞">隔壁小飞</li>
+						<li class="option" data-val="老王">隔壁老王</li>
+					</ul>
+				</div>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<label>添加下拉列表：</label>
+				<div class="mt-select">
+					<div class="mt-select-title">隔壁邻居是？</div>
+					<i class="iconfont icon-xia"></i>
+					<ul class="mt-select-box">
+						<li class="option" data-val="小张">隔壁小张</li>
+						<li class="option" data-val="小红">隔壁小红</li>
+						<li class="option" data-val="小赵">隔壁小赵</li>
+						<li class="option" data-val="小飞">隔壁小飞</li>
+						<li class="mt-select-add"><input class="mt-add-select-val" type="text" placeholder="添加新选项"><a class="mt-add-select-btn" href="javascript:;">+</a></li>
+					</ul>
+				</div>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<label>下拉选择disabled：</label>
+				<div class="mt-select mt-select-disabled">
+					<div class="mt-select-title">隔壁邻居是？</div>
+					<i class="iconfont icon-xia"></i>
+					<ul class="mt-select-box">
+						<li class="option" data-val="小张">隔壁小张</li>
+						<li class="option" data-val="小红">隔壁小红</li>
+						<li class="option" data-val="小赵">隔壁小赵</li>
+						<li class="option" data-val="小飞">隔壁小飞</li>
+						<li class="option" data-val="老王">隔壁老王</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+    </div><!--end mt-page-content-->
+
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">滑块</h3>
+    	<div class="mt-g">
+    		<div class="mt-g-4">
+    			
+    			<!--滑块-->
+    			<label>滑块：</label><br><br>
+    			<div class="mt-slider" data-set="minData:0,maxData:100,iniData:80" style="width: 300px;">
+    				<div class="mt-slider-bar"><a href="javascript:;" class="mt-slider-btn"></a></div>
+    				<input class="mt-slider-val" type="text">
+    				<!-- <div class="mt-slider-tips"></div> -->
+    			</div>
+
+    			<br><br>
+
+    			<!--滑块-->
+    			<label>滑块2：</label><br><br>
+    			<div class="mt-slider mt-slider-red" data-set="minData:0,maxData:100,iniData:30" style="width: 300px;">
+    				<div class="mt-slider-bar"><a href="javascript:;" class="mt-slider-btn"></a></div>
+    				<input class="mt-slider-val" type="text">
+    				<!-- <div class="mt-slider-tips"></div> -->
+    			</div>
+
+    			<br><br>
+
+    			<!--滑块-->
+    			<label>滑块3：</label><br><br>
+    			<div class="mt-slider mt-slider-green" data-set="minData:0,maxData:100,iniData:66" style="width: 300px;">
+    				<div class="mt-slider-bar"><a href="javascript:;" class="mt-slider-btn"></a></div>
+    				<input class="mt-slider-val" type="text">
+    				<!-- <div class="mt-slider-tips"></div> -->
+    			</div>
+
+    		</div>
+
+    		<div class="mt-g-4">
+    			
+    			<!--滑块-->
+    			<label>滑块：</label><br><br>
+    			<div class="mt-slider" data-set="minData:0,maxData:100,iniData:80" style="width: 300px;">
+    				<div class="mt-slider-bar"></div>
+    				<input class="mt-slider-val" type="text">
+    				<!-- <div class="mt-slider-tips"></div> -->
+    			</div>
+
+    			<br><br>
+
+    			<!--滑块-->
+    			<label>滑块2：</label><br><br>
+    			<div class="mt-slider mt-slider-red" data-set="minData:0,maxData:100,iniData:30" style="width: 300px;">
+    				<div class="mt-slider-bar"></div>
+    				<input class="mt-slider-val" type="text">
+    				<!-- <div class="mt-slider-tips"></div> -->
+    			</div>
+
+    			<br><br>
+
+    			<!--滑块-->
+    			<label>滑块3：</label><br><br>
+    			<div class="mt-slider mt-slider-green" data-set="minData:0,maxData:100,iniData:66" style="width: 300px;">
+    				<div class="mt-slider-bar"></div>
+    				<input class="mt-slider-val" type="text">
+    				<!-- <div class="mt-slider-tips"></div> -->
+    			</div>
+
+    		</div>
+
+    		<div class="mt-g-4">
+
+    			<label>进度条：</label><br><br>
+    			
+    			<div class="mt-slider-active mt-slider-active-green">
+    				<div class="mt-slider-active-bar" style="width: 100px;"></div>
+    			</div>
+
+    			<br>
+    			<br>
+
+    			<div class="mt-slider-active mt-slider-active-red">
+    				<div class="mt-slider-active-bar" style="width: 400px;"></div>
+    			</div>
+
+    			<br>
+    			<br>
+
+    			<div class="mt-slider-active">
+    				<div class="mt-slider-active-bar" style="width: 300px;"></div>
+    			</div>
+
+    		</div>
+
+
+    	</div>
+    </div><!--end mt-page-content-->
+
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">日历</h3>
+    	<div class="mt-g">
+    		<div class="mt-g-12">
+    			<div class="mt-input mt-date mt-icon-input">
+		  			<input type="text" value="2015-12-28" readonly="readonly" id="date1">
+		  			<a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+		  		</div>
+
+		  		<div class="mt-input mt-icon-input">
+		  			<input type="text" value="2015-12-28" disabled="disabled" readonly="readonly" id="date2">
+		  			<a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+		  		</div>
+
+    		</div>
+    	</div>
+    </div><!--end mt-page-content-->
+
+    <div class="mt-page-content">
+    	<h3 class="mt-padding">开关</h3>
+    	<div class="mt-g">
+    		<div class="mt-g-4">
+    			
+    			开：
+
+    			<div class="mt-switch">
+    				<span class="mt-switch-info"><em>on</em><em>off</em></span>
+    				<a href="javascript:;" class="mt-switch-btn"></a>
+    			</div>
+
+    			<br><br>
+
+    			关：
+
+    			<div class="mt-switch mt-switch-off">
+    				<span class="mt-switch-info"><em>on</em><em>off</em></span>
+    				<a href="javascript:;" class="mt-switch-btn"></a>
+    			</div>
+
+    		</div>
+    		<div class="mt-g-4">
+
+    			disabled：
+    			
+    			<div class="mt-switch mt-switch-off" disabled="disabled">
+    				<span class="mt-switch-info"><em>on</em><em>off</em></span>
+    				<a href="javascript:;" class="mt-switch-btn"></a>
+    			</div>
+
+    			<br><br>
+
+    			disabled：
+
+    			<div class="mt-switch" disabled="disabled">
+    				<span class="mt-switch-info"><em>on</em><em>off</em></span>
+    				<a href="javascript:;" class="mt-switch-btn"></a>
+    			</div>
+
+    		</div>
+    	</div>
+    </div><!--end mt-page-content-->
+
+    <div class="mt-form">
+    	
+    </div>
+
+</div>
+
+<!--footer-->
+<footer>footer</footer>
+
+<script>
+$(function(){
+	$("#getRadio").on('click', function(event) {
+		console.log("radio的值：",$(":radio:checked").val());
+	});
+
+	//日历初始化
+	laydate({
+		elem: '#date1', //需显示日期的元素选择器
+        event: 'click', //触发事件
+        format: 'YYYY-MM-DD', // YYYY-MM-DD hh:mm:ss 日期格式
+        istime: false, //是否开启时间选择
+        isclear: true, //是否显示清空
+        istoday: true, //是否显示今天
+        issure: true, //是否显示确认
+        festival: true, //是否显示节日
+        min: '1900-01-01 00:00:00', //最小日期
+        max: '2099-12-31 23:59:59', //最大日期
+        start: '2014-6-15 23:00:00',    //开始日期
+        fixed: false, //是否固定在可视区域
+        zIndex: 99999999, //css z-index
+        choose: function(dates){
+        	console.log(dates);
+        } //选择好日期的回调
+	});
+});
+</script>
+</body>
+</html>

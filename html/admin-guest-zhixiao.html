@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head> 
+<body>
+
+<!--header-->
+<include src="public/admin-header.html" data-name="直销客户"></include> 
+
+<!--menu-->
+<include src="public/admin-sideMenu.html" data-menu="guest"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+  
+  <div class="mt-form-header">
+        <label>购买时间 : </label>
+        <div class="mt-input mt-date mt-icon-input">
+          <input type="text" value="2015-12-28" readonly="readonly" placeholder="选择开始时间" id="date1">
+          <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+        </div>
+        &nbsp;
+        <div class="mt-input mt-date mt-icon-input">
+          <input type="text" value="2015-12-28" readonly="readonly" placeholder="选择结束时间" id="date2">
+          <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+        </div>
+        &nbsp;
+        <div class="mt-select">
+            <div class="mt-select-title">请选择</div>
+            <i class="iconfont icon-xia"></i>
+            <ul class="mt-select-box">
+              <li class="option" data-val="小张">公司名称</li>
+              <li class="option" data-val="小红">用户名</li>
+              <li class="option" data-val="小赵">报告编号</li>
+            </ul>
+        </div>
+        &nbsp;
+        <div class="mt-input mt-icon-input">
+          <input type="text" placeholder="关键字">
+        </div>
+        &nbsp;
+        <a href="javascript:;" class="mt-btn-blue mt-btn-sm ink-reaction"><i class="iconfont icon-sousuo1"></i> 搜索</a>
+        &nbsp;
+        <a href="javascript:;" class="mt-btn-green mt-btn-sm ink-reaction"><i class="iconfont icon-icon46"></i> Excel下载</a>
+  </div>
+  <div class="mt-form-header-block"></div>
+
+  <div class="mt-content-1x">
+    
+  <table class="mt-table mt-table-striped">
+      <tr>
+          <th>序号</th>
+          <th>用户名</th>
+          <th>公司名称</th>
+          <th>手机</th>
+          <th>邮箱</th>
+          <th>最后登录时间</th>
+          <th>消费总计/元</th>
+          <th>账户余额/元</th>
+          <th>注册时间</th>
+          <th>操作</th>
+      </tr>
+      <tr>
+          <td>19</td>
+          <td>yanli11</td>
+          <td>北京时代华诚投资有限公司</td>
+          <td>18780297893</td>
+          <td>280261148@qq.com</td>
+          <td>2015-7-31</td>
+          <td>1010000.00</td>
+          <td>724800.00</td>
+          <td>2015-5-16</td>
+          <td>
+              <a class="mt-btn-round-blue mt-btn-xs ink-reaction" href="#">详情</a>
+              <a class="mt-btn-round-yellow mt-btn-xs ink-reaction" href="#">更多</a>
+          </td>
+      </tr>
+      <tr>
+          <td>19</td>
+          <td>yanli11</td>
+          <td>北京时代华诚投资有限公司</td>
+          <td>18780297893</td>
+          <td>280261148@qq.com</td>
+          <td>2015-7-31</td>
+          <td>1010000.00</td>
+          <td>724800.00</td>
+          <td>2015-5-16</td>
+          <td>
+              <a class="mt-btn-round-blue mt-btn-xs ink-reaction" href="#">详情</a>
+              <a class="mt-btn-round-yellow mt-btn-xs ink-reaction" href="#">更多</a>
+          </td>
+      </tr>
+      <tr>
+          <td>19</td>
+          <td>yanli11</td>
+          <td>北京时代华诚投资有限公司</td>
+          <td>18780297893</td>
+          <td>280261148@qq.com</td>
+          <td>2015-7-31</td>
+          <td>1010000.00</td>
+          <td>724800.00</td>
+          <td>2015-5-16</td>
+          <td>
+              <a class="mt-btn-round-blue mt-btn-xs ink-reaction" href="#">详情</a>
+              <a class="mt-btn-round-yellow mt-btn-xs ink-reaction" href="#">更多</a>
+          </td>
+      </tr>
+      <tr>
+          <td>19</td>
+          <td>yanli11</td>
+          <td>北京时代华诚投资有限公司</td>
+          <td>18780297893</td>
+          <td>280261148@qq.com</td>
+          <td>2015-7-31</td>
+          <td>1010000.00</td>
+          <td>724800.00</td>
+          <td>2015-5-16</td>
+          <td>
+              <a class="mt-btn-round-blue mt-btn-xs ink-reaction" href="#">详情</a>
+              <a class="mt-btn-round-yellow mt-btn-xs ink-reaction" href="#">更多</a>
+          </td>
+      </tr>
+      <tr>
+          <td>19</td>
+          <td>yanli11</td>
+          <td>北京时代华诚投资有限公司</td>
+          <td>18780297893</td>
+          <td>280261148@qq.com</td>
+          <td>2015-7-31</td>
+          <td>1010000.00</td>
+          <td>724800.00</td>
+          <td>2015-5-16</td>
+          <td>
+              <a class="mt-btn-round-blue mt-btn-xs ink-reaction" href="#">详情</a>
+              <a class="mt-btn-round-yellow mt-btn-xs ink-reaction" href="#">更多</a>
+          </td>
+      </tr>
+      <tr>
+          <td>19</td>
+          <td>yanli11</td>
+          <td>北京时代华诚投资有限公司</td>
+          <td>18780297893</td>
+          <td>280261148@qq.com</td>
+          <td>2015-7-31</td>
+          <td>1010000.00</td>
+          <td>724800.00</td>
+          <td>2015-5-16</td>
+          <td>
+              <a class="mt-btn-round-blue mt-btn-xs ink-reaction" href="#">详情</a>
+              <a class="mt-btn-round-yellow mt-btn-xs ink-reaction" href="#">更多</a>
+          </td>
+      </tr>
+      
+
+  </table>
+  <include src="public/pagelist.html"></include> 
+  </div>
+
+</div>
+
+
+</body>
+<script src="../assets/script/plugin/laydate/laydate.js"></script>
+<script>
+$(function(){
+
+  //日历初始化
+  laydate({
+    elem: '#date1', //需显示日期的元素选择器
+        event: 'click', //触发事件
+        format: 'YYYY-MM-DD', // YYYY-MM-DD hh:mm:ss 日期格式
+        istime: false, //是否开启时间选择
+        isclear: true, //是否显示清空
+        istoday: true, //是否显示今天
+        issure: true, //是否显示确认
+        festival: true, //是否显示节日
+        min: '1900-01-01 00:00:00', //最小日期
+        max: '2099-12-31 23:59:59', //最大日期
+        start: '2014-6-15 23:00:00',    //开始日期
+        fixed: false, //是否固定在可视区域
+        zIndex: 99999999, //css z-index
+        choose: function(dates){
+          console.log(dates);
+        } //选择好日期的回调
+  });
+
+  //日历初始化
+  laydate({
+    elem: '#date2', //需显示日期的元素选择器
+        event: 'click', //触发事件
+        format: 'YYYY-MM-DD', // YYYY-MM-DD hh:mm:ss 日期格式
+        istime: false, //是否开启时间选择
+        isclear: true, //是否显示清空
+        istoday: true, //是否显示今天
+        issure: true, //是否显示确认
+        festival: true, //是否显示节日
+        min: '1900-01-01 00:00:00', //最小日期
+        max: '2099-12-31 23:59:59', //最大日期
+        start: '2014-6-15 23:00:00',    //开始日期
+        fixed: false, //是否固定在可视区域
+        zIndex: 99999999, //css z-index
+        choose: function(dates){
+          console.log(dates);
+        } //选择好日期的回调
+  });
+
+});
+</script>
+</html>

@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1452220399_5465724.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/mtui.css" />
+<!--[if lt IE 9]>
+<script src="../assets/script/plugin/jquery-1.11.2.js"></script>
+<script src="../assets/script/public/html5.js"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../assets/script/plugin/jquery-2.1.1.js"></script>
+<!--<![endif]-->
+<script src="../assets/script/plugin/mtui.js"></script>
+<!-- <script src="../assets/script/seajs/sea.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head>
+<body>
+
+<!--header-->
+<!-- 头部-->
+<div class="mt-header">
+
+	<div class="mt-breadcrumb" style="display: inline-block;">
+	    <span>当前位置:</span>
+	    <ul>
+	        <li><a href="javascript:">主页</a></li>
+	      	<li><a href="javascript:">系统重置</a></li>
+	    </ul>
+	</div>
+
+<!-- 	<div class="admin-info">
+		<i class="iconfont icon-yonghu"></i>您好，admin
+	</div> -->
+
+	<!--其他菜单-->
+	<div class="mt-header-othermenu">
+		<div class="mt-header-menu">
+			<i class="iconfont icon-gerenzhongxin"></i> 您好，admin
+			<ul class="mt-sub-menu animated fadeInRight">
+				<li><a href="#">测试导航1</a></li>
+				<li><a href="#">测试导航2</a></li>
+				<li><a href="#">测试导航3</a></li>
+				<li><a href="admin-login.html">退出系统</a></li>
+			</ul>
+		</div>
+	</div>
+ 
+</div><!--end mt-header--> 
+
+<!--menu-->
+<!--侧面导航栏-->
+<div class="mt-sidemenu">
+	<!--LOGO-->
+	<div class="mt-logo">
+		<h1><a href="admin-index.html">浩格云信</a></h1>
+	</div>
+	
+	<!--导航-->
+	<div class="mt-sidenav">
+		<ul class="mt-sidenav-ul">
+			<li data-sidename="index">
+				<a class="ink-reaction" href="admin-user-action.html">
+					<i class="iconfont icon-iconfontkehujigongyingshangguanli"></i>
+					<span>用户行为</span>
+				</a>
+			</li>
+			<li data-sidename="order">
+				<a href="admin-order.html">
+					<i class="iconfont icon-iconfontbiaodandingyi"></i>
+					<span>所有订单</span>
+				</a>
+			</li>
+			<li data-sidename="member">
+				<a href="javascript:;">
+					<i class="iconfont icon-yuangongguanli"></i>
+					<span>员工管理</span>
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="admin-member.html">员工列表</a></li>
+					<li><a href="admin-member-add.html">添加员工</a></li>
+				</ul>
+			</li>
+			<li data-sidename="guest">
+				<a href="javascript:;">
+					<i class="iconfont icon-kehuguanli"></i>
+					<span>客户管理</span>
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="admin-guest-all.html">所有客户</a></li>
+					<li><a href="admin-guest-daili.html">代理商</a></li>
+					<li><a href="admin-guest-zhongduan.html">终端客户</a></li>
+					<li><a href="admin-guest-zhixiao.html">直销客户</a></li>
+					<li><a href="admin-guest-zhixiao-set.html">直销客户设置</a></li>
+					<li><a href="admin-guest-zhixiao-info.html">客户信息</a></li>
+				</ul>
+			</li>
+			<li data-sidename="buy">
+				<a href="javascript:;">
+					<i class="iconfont icon-chongzhi"></i>
+					<span>充值管理</span>
+				</a>
+				<ul class="mt-sub-nav"> 
+					<li><a href="admin-buy.html">充值列表</a></li>
+					<li><a href="admin-buy-add.html">充值申请</a></li> 
+				</ul>
+			</li>
+			<li data-sidename="user">
+				<a href="javascript:;">
+					<i class="iconfont icon-xianshiqi"></i>
+					<span>前台管理</span>
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="#">邮件管理</a></li>
+					<li><a href="admin-user-add.html">添加用户</a></li>
+				</ul>
+			</li>
+			<li data-sidename="system">
+				<a href="javascript:;">
+					<i class="iconfont icon-zidongpeizhi"></i>
+					<span>系统配置</span> 
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="admin-system.html">系统重置</a></li>
+					<li><a href="admin-system-menu.html">菜单设置</a></li>
+					<li><a href="admin-msgSend.html">消息推送</a></li>
+				</ul>
+			</li>
+			<li data-sidename="other">
+				<a href="javascript:;">
+					<i class="iconfont icon-zidongpeizhi"></i>
+					<span>扩展功能</span> 
+				</a>
+				<ul class="mt-sub-nav">
+					<li><a href="admin-other-feedback.html">意见反馈</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+//菜单选中状态
+$(function(){
+	var $ul = $(".mt-sidenav-ul");
+	var $li = $ul.find('li');
+	var winHei = $(window).height();
+
+	//菜单动画
+	var sidenavAnimate = function(){
+		var liLen = $li.length;
+		var ulHei = $ul.height()+50;
+		var x = (ulHei-winHei)/(liLen-1);
+		if(ulHei - winHei <= 0)return;
+		$(".mt-sidenav").on('mouseover', 'li', function(event) {
+			var index = $(this).index();
+			$ul.css({
+				top: -index*x
+			});
+		});
+	};
+
+	//菜单选中状态
+	var setActiveForSidenav = function(){
+		$("li[data-sidename='system']").addClass('mt-active');
+	};
+
+
+	//init
+	sidenavAnimate();
+	setActiveForSidenav();
+});
+</script> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+
+  <div class="mt-content-1x admin-member-add">
+    
+    <div class="mt-g">
+        <div class="mt-g-12">
+            <a href="javascript:;" class="mt-btn-blue mt-btn-lg ink-reaction">重置系统</a>
+            <a href="javascript:;" class="mt-btn-red mt-btn-lg ink-reaction">更新招中标数据</a>
+            <a href="javascript:;" class="mt-btn-yellow mt-btn-lg ink-reaction">更新诉讼记录</a>
+            <a href="javascript:;" class="mt-btn-green mt-btn-lg ink-reaction">更新关联关系</a>
+        </div>
+
+        <div class="mt-g-6">
+            <h3>任务列表</h3>
+            <table class="mt-table mt-table-striped mt-table-border">
+                <tr>
+                    <th>任务类型</th>
+                    <th>任务状态</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>进行中</td>
+                    <td>继续</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>进行中</td>
+                    <td>继续</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>进行中</td>
+                    <td>继续</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>进行中</td>
+                    <td>继续</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>进行中</td>
+                    <td>继续</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--选择user弹窗--> 
+<div class="mt-modal-dialog" id="modalTest">
+  <a href="javascript:;" class="mt-modal-close"><i class="iconfont icon-shanchu"></i></a>
+  <div class="admin-dialog-header">
+      <div class="mt-input">
+        <input type="text" placeholder="用户名">
+      </div>
+      <div class="mt-input">
+        <input type="text" placeholder="公司名称">
+      </div>
+      <a href="javascript:;" class="mt-btn-green ink-reaction mt-btn-sm"><i class="iconfont icon-sousuo1"></i> 搜索</a>
+  </div>
+  <div class="mt-g">
+    <div class="mt-g-12 admin-dialog-maxhei">
+        <table class="mt-table mt-table-hover mt-table-striped">
+            <tr>
+                <th>用户名</th>
+                <th>公司名称</th>
+                <th>座机电话</th>
+                <th>手机号码</th>
+                <th>邮箱</th>
+                <th>地址</th>
+                <th>等级</th>
+                <th>金额</th>
+                <th>购买价格</th>
+                <th>开户银行</th>
+                <th>开户账号</th>
+                <th>审核状态</th>
+                <th>区域</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+            <tr>
+                <td>hkf4</td>
+                <td>阿里云有限公司</td>
+                <td>028-845462</td>
+                <td>13551301693</td>
+                <td>676014586@qq.com</td>
+                <td>四川成都世纪城</td>
+                <td>S</td>
+                <td>102441.0</td>
+                <td>2000</td>
+                <td>手动输入</td>
+                <td>1218294938434</td>
+                <td>已通过</td>
+                <td>成都</td>
+                <td><a href="javascript:;" class="mt-btn-round-blue mt-btn-xs ink-reaction">选择</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="mt-g-12 admin-dialog-pagelist">
+      <div class="mt-pagelist clearfix" id="pageListundefined">
+    <div class="mt-pagelist-left">
+        <div class="mt-select">
+            <div class="mt-select-title" data-val="10">10条/页</div>
+            <i class="iconfont icon-xia"></i>
+            <ul class="mt-select-box">
+                <li class="option" data-val="10">10条/页</li>
+                <li class="option" data-val="20">20条/页</li>
+                <li class="option" data-val="50">50条/页</li>
+            </ul>
+        </div>
+        <span>共 <em class="mt-pagelist-count">0</em> 页</span>
+    </div>
+    <div class="mt-pagelist-right">
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-prev">上一页</a>
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-btn mt-pagelist-runprev"><i class="iconfont icon-duduyinleappicon0501"></i></a>
+        <div class="mt-pagelist-content">
+            <ul class="mt-pagelist-page"></ul>
+        </div>
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-btn mt-pagelist-runnext"><i class="iconfont icon-duduyinleappicon1401"></i></a>
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-next">下一页</a>
+        <span class="mt-pagelist-input">
+            第<input class="mt-input" type="text">页
+        </span>
+        <a href="javascript:;" class="mt-btn-grey ink-reaction mt-pagelist-btn">跳转</a>
+    </div>
+</div>
+
+<script>
+$(function(){
+    $("#pageListundefined").each(function(index, el) {
+        $(this).pagelist({
+              nowpage:1,
+              count:215,
+              maxcount:20,
+              callback: function(page){
+                console.log("您选择了页码：",page);
+              }
+        }); 
+    });
+});
+</script> 
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+$(function(){
+
+});
+</script>
+</html>

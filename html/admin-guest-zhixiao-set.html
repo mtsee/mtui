@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+    <title>MTUI后台模板</title>
+    <meta name="description" content="Mantou">
+    <meta name="keywords" content="Mantou">
+    <include src="public/meta.html"></include>
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
+</head> 
+<body>
+
+<!--header-->
+<include src="public/admin-header.html" data-name="直销客户"></include> 
+
+<!--menu-->
+<include src="public/admin-sideMenu.html" data-menu="guest"></include> 
+
+<!--主要内容区域-->
+<div class="mt-main-content">
+  
+  <div class="mt-content-1x">
+      
+      <div class="mt-tabs" data-tabs="{autoh:false,drag:false}">
+          <ul class="mt-tabs-header">
+            <li class="mt-tabs-active"><a href="javascript: void(0)">基本资料</a></li>
+            <li><a href="javascript: void(0)">联系人信息</a></li>
+            <li><a href="javascript: void(0)">开票信息</a></li>
+            <li><a href="javascript: void(0)">产品套系</a></li>
+            <li><a href="javascript: void(0)">子账号设置</a></li>
+          </ul>
+          <div class="mt-tabs-content">
+            <div class="mt-tabs-wrap">
+              <div class="mt-tabs-item mt-tabs-active">
+
+                  <table class="mt-table mt-table-striped">
+                      <tr> <td class="admin-w100">用户名</td> <td>huangguanghu</td> </tr>
+                      <tr> <td>公司名称</td> <td>数联铭品</td> </tr>
+                      <tr> <td>座机</td> <td>huangguanghu</td> </tr>
+                      <tr> <td>手机</td> <td>13438261029</td> </tr>
+                      <tr> <td>邮箱</td> <td>280261148@qq.com</td> </tr>
+                      <tr> <td>地址</td> <td>世纪城</td> </tr>
+                  </table>
+
+              </div>
+              <div class="mt-tabs-item">
+                  
+                  <table class="mt-table mt-table-striped">
+                        <tr>
+                            <th>姓名</th>
+                            <th>邮箱</th>
+                            <th>电话</th>
+                            <th>职位</th>
+                        </tr>
+                        <tr>
+                            <td>馒头</td>
+                            <td>676015863@qq.com</td>
+                            <td>13438261029</td>
+                            <td>web前端</td>
+                        </tr>
+                        <tr>
+                            <td>馒头</td>
+                            <td>676015863@qq.com</td>
+                            <td>13438261029</td>
+                            <td>web前端</td>
+                        </tr>
+                        <tr>
+                            <td>馒头</td>
+                            <td>676015863@qq.com</td>
+                            <td>13438261029</td>
+                            <td>web前端</td>
+                        </tr>
+                  </table>
+
+              </div>
+              <div class="mt-tabs-item">
+
+                  <table class="mt-table mt-table-striped">
+                      <tr> <td class="admin-w100">注册场所地址</td> <td></td> </tr>
+                      <tr> <td>注册固定电话</td> <td></td> </tr>
+                      <tr> <td>基本户开户账号</td> <td></td> </tr>
+                      <tr> <td>税务等级复印件</td> <td><a href="javascript:;" class="mt-btn-grey">暂时没有上传图片</a></td> </tr>
+                      <tr> <td>营业执照复印件</td> <td><a href="javascript:;" class="mt-btn-grey">暂时没有上传图片</a></td> </tr>
+                      <tr> <td>一般纳税人资格认证复印件</td> <td><a href="javascript:;" class="mt-btn-grey">暂时没有上传图片</a></td> </tr>
+                      <tr> <td>上传权限开通</td> <td>未做</td> </tr>
+                  </table>
+
+              </div>
+              <div class="mt-tabs-item">
+                  
+                  <div class="admin-tx">
+
+                      <table class="mt-table">
+                          <tr>
+                            <th>
+                                <label class="mt-checkbox"><input class="" type="checkbox" value="A"><i class="iconfont icon-duigou"></i> <span>A套系</span></label>
+                            </th>
+                          </tr>
+                          <tr>
+                            <td>
+                                <label>价格：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>时间：</label>
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="a-date1" placeholder="开始">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                ~
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="a-date2" placeholder="结束">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                &nbsp;
+                                <label>总量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>每日可购买量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                <br><br>
+                                <label>赠送总量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>赠送时间：</label>
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="a-date3" placeholder="开始">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                ~
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="a-date4" placeholder="结束">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                &nbsp;
+                                <label>每日赠送量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                              <td></td>
+                          </tr>
+                      </table>
+
+                  </div><!--end admin-tx-->
+
+                  <div class="admin-tx">
+                      
+                      <table class="mt-table">
+                          <tr>
+                            <th>
+                                <label class="mt-checkbox"><input class="" type="checkbox" value="0"><i class="iconfont icon-duigou"></i> <span>E套系</span></label>
+                            </th>
+                          </tr>
+                          <tr>
+                            <td>
+                                <label>价格：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>时间：</label>
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="e-date1" placeholder="开始">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                ~
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="e-date2" placeholder="结束">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                &nbsp;
+                                <label>总量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>每日可购买量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                <br><br>
+                                <label>赠送总量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>赠送时间：</label>
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="e-date3" placeholder="开始">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                ~
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="e-date4" placeholder="结束">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                &nbsp;
+                                <label>每日赠送量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                              <td></td>
+                          </tr>
+                      </table>
+
+                  </div><!--end admin-tx-->
+
+                  <div class="admin-tx">
+                      
+                      <table class="mt-table">
+                          <tr>
+                            <th>
+                                <label class="mt-checkbox"><input class="" type="checkbox" value="0"><i class="iconfont icon-duigou"></i> <span>S套系</span></label>
+                            </th>
+                          </tr>
+                          <tr>
+                            <td>
+                                <label>价格：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>时间：</label>
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="s-date1" placeholder="开始">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                ~
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="s-date2" placeholder="结束">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                &nbsp;
+                                <label>总量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>每日可购买量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                <br><br>
+                                <label>赠送总量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                                &nbsp;
+                                <label>赠送时间：</label>
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="s-date3" placeholder="开始">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                ~
+                                <div class="mt-input mt-date mt-icon-input">
+                                  <input type="text" value="" readonly="readonly" id="s-date4" placeholder="结束">
+                                  <a href="javascript:;" class="mt-iconbtn"><i class="iconfont icon-gmrili"></i></a> 
+                                </div>
+                                &nbsp;
+                                <label>每日赠送量：</label>
+                                <div class="mt-input">
+                                  <input type="text" placeholder="">
+                                </div>
+                              <td></td>
+                          </tr>
+                      </table>
+
+                  </div><!--end admin-tx-->
+
+                  <div class="admin-tx-submit">
+                    <a href="javascript:;" class="mt-btn-blue ink-reaction mt-btn-lg">确认修改</a>
+                  </div>
+
+              </div>
+              <div class="mt-tabs-item">
+                  <table class="mt-table mt-table-noborder">
+                      <tr> 
+                        <td class="admin-w100">是否有权限设置子账号</td>
+                        <td>
+                            <label class="mt-radio">
+                              <input type="radio" name="sex" value="是">
+                              <i class="iconfont icon-radio"></i>
+                              <span>是</span>
+                            </label>
+
+                            <label class="mt-radio mt-radio-active">
+                              <input type="radio" checked="checked" name="sex" value="否">
+                              <i class="iconfont icon-radio"></i>
+                              <span>否</span>
+                            </label>
+                        </td> 
+                      </tr>
+                      <tr> 
+                          <td>子账号个数</td> 
+                          <td>
+                              <div class="mt-input">
+                                <input type="text" placeholder="">
+                              </div>
+                          </td> 
+                      </tr>
+                      <tr> 
+                          <td><a href="javascript:;" class="mt-btn-blue ink-reaction mt-btn-lg">确认修改</a></td> 
+                          <td></td> 
+                      </tr>
+                  </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+
+</div>
+
+<script src="../assets/script/plugin/laydate/laydate.js"></script>
+</body>
+<script>
+$(function(){
+
+  //日历初始化
+  var arr = ['#a-date1','#a-date2','#a-date3','#a-date4','#e-date1','#e-date2','#e-date3','#e-date4','#s-date1','#s-date2','#s-date3','#s-date4'];
+  for (var i = 0; i < arr.length; i++) {
+    laydate({
+      elem: arr[i], //需显示日期的元素选择器
+          format: 'YYYY-MM-DD', // YYYY-MM-DD hh:mm:ss 日期格式
+          choose: function(dates){
+            console.log(dates);
+          } //选择好日期的回调
+    });
+  }
+
+});
+</script>
+</html>
