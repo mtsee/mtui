@@ -3,7 +3,6 @@
 
 [UI地址](http://www.mtsee.com/mtui/view/)
 
-[后台案例](http://www.mtsee.com/mtui/view/admin-index.html)
 
 资源文件
 - assets
